@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MemberViewCell : UICollectionViewCell
-
+@property(nonatomic) UILabel *title;
+@property(nonatomic) UILabel *name;
 @end
