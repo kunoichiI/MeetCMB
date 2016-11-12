@@ -18,6 +18,10 @@
 		90C399001DD6D85700EFDD6E /* coffee-logos.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C398FF1DD6D85700EFDD6E /* coffee-logos.png */; };
 		90C399031DD6DF9D00EFDD6E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399021DD6DF9D00EFDD6E /* DetailViewController.m */; };
 		90C399061DD6DFFC00EFDD6E /* MemberViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399051DD6DFFC00EFDD6E /* MemberViewCell.m */; };
+		90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C399071DD7DFC500EFDD6E /* placeholder.png */; };
+		90C3990C1DD7E31700EFDD6E /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */; };
+		90C3990D1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */; };
+		90C3990E1DD7E31700EFDD6E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		90C399021DD6DF9D00EFDD6E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		90C399041DD6DFFC00EFDD6E /* MemberViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewCell.h; sourceTree = "<group>"; };
 		90C399051DD6DFFC00EFDD6E /* MemberViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewCell.m; sourceTree = "<group>"; };
+		90C399071DD7DFC500EFDD6E /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,10 @@
 		90C398C41DD6CA6300EFDD6E /* Meet CMB Team */ = {
 			isa = PBXGroup;
 			children = (
+				90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */,
+				90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */,
+				90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */,
+				90C399071DD7DFC500EFDD6E /* placeholder.png */,
 				90C398FF1DD6D85700EFDD6E /* coffee-logos.png */,
 				90C398F81DD6CD3900EFDD6E /* team.json */,
 				90C398C81DD6CA6300EFDD6E /* AppDelegate.h */,
@@ -262,9 +274,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C3990C1DD7E31700EFDD6E /* OpenSans-Light.ttf in Resources */,
 				90C399001DD6D85700EFDD6E /* coffee-logos.png in Resources */,
+				90C3990D1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf in Resources */,
 				90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */,
 				90C398F91DD6CD3900EFDD6E /* team.json in Resources */,
+				90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */,
+				90C3990E1DD7E31700EFDD6E /* OpenSans-Regular.ttf in Resources */,
 				90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
