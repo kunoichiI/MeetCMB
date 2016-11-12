@@ -8,16 +8,36 @@
 
 #import "MembersViewController.h"
 
-@interface MembersViewController ()
+@interface MembersViewController () <UICollectionViewDelegate>
 
 @end
 
 @implementation MembersViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"Profile";
+
+-(instancetype) init {
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+    
+    layout.itemSize = CGSizeMake(106.0, 106.0);
+    layout.minimumInteritemSpacing = 1.0;
+    layout.minimumLineSpacing = 1.0;
+    
+    return (self = [self initWithCollectionViewLayout:layout]);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    self.title = @"Meet CMB";
+    
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"team" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    NSLog(@"%@", json);
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;

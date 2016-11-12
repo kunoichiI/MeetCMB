@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MembersViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    MembersViewController *membersViewController = [[MembersViewController alloc]init];
+    UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:membersViewController];
+    
+    // Set navigation bar title color using the appearance proxy
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:63.0/255.0 green:97.0/255.0 blue:178.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
+    
+    self.window.rootViewController = naviController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
