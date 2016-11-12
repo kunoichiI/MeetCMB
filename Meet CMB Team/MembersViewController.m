@@ -10,6 +10,7 @@
 
 @interface MembersViewController () <UICollectionViewDelegate>
 
+@property(nonatomic) NSArray *profiles;
 @end
 
 @implementation MembersViewController
@@ -19,7 +20,8 @@ static NSString * const reuseIdentifier = @"Profile";
 -(instancetype) init {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     
-    layout.itemSize = CGSizeMake(106.0, 106.0);
+    layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    layout.itemSize = CGSizeMake(206.0, 206.0);
     layout.minimumInteritemSpacing = 1.0;
     layout.minimumLineSpacing = 1.0;
     
@@ -36,15 +38,15 @@ static NSString * const reuseIdentifier = @"Profile";
     NSString *file = [[NSBundle mainBundle] pathForResource:@"team" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:file];
     NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
-    NSLog(@"%@", json);
+    self.profiles = json;
+    //NSLog(@"%@", self.profiles);
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 
@@ -66,21 +68,19 @@ static NSString * const reuseIdentifier = @"Profile";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return [self.profiles count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    
+    cell.backgroundColor=[UIColor greenColor];
     return cell;
 }
 

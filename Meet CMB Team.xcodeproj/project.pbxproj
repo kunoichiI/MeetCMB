@@ -16,6 +16,8 @@
 		90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */; };
 		90C398FE1DD6D0AC00EFDD6E /* MembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398FD1DD6D0AC00EFDD6E /* MembersViewController.m */; };
 		90C399001DD6D85700EFDD6E /* coffee-logos.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C398FF1DD6D85700EFDD6E /* coffee-logos.png */; };
+		90C399031DD6DF9D00EFDD6E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399021DD6DF9D00EFDD6E /* DetailViewController.m */; };
+		90C399061DD6DFFC00EFDD6E /* MemberViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399051DD6DFFC00EFDD6E /* MemberViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		90C398FC1DD6D0AC00EFDD6E /* MembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembersViewController.h; sourceTree = "<group>"; };
 		90C398FD1DD6D0AC00EFDD6E /* MembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembersViewController.m; sourceTree = "<group>"; };
 		90C398FF1DD6D85700EFDD6E /* coffee-logos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coffee-logos.png"; sourceTree = "<group>"; };
+		90C399011DD6DF9D00EFDD6E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		90C399021DD6DF9D00EFDD6E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		90C399041DD6DFFC00EFDD6E /* MemberViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewCell.h; sourceTree = "<group>"; };
+		90C399051DD6DFFC00EFDD6E /* MemberViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,10 @@
 				90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */,
 				90C398FC1DD6D0AC00EFDD6E /* MembersViewController.h */,
 				90C398FD1DD6D0AC00EFDD6E /* MembersViewController.m */,
+				90C399011DD6DF9D00EFDD6E /* DetailViewController.h */,
+				90C399021DD6DF9D00EFDD6E /* DetailViewController.m */,
+				90C399041DD6DFFC00EFDD6E /* MemberViewCell.h */,
+				90C399051DD6DFFC00EFDD6E /* MemberViewCell.m */,
 			);
 			path = "Meet CMB Team";
 			sourceTree = "<group>";
@@ -283,6 +293,8 @@
 				90C398FE1DD6D0AC00EFDD6E /* MembersViewController.m in Sources */,
 				90C398CA1DD6CA6300EFDD6E /* AppDelegate.m in Sources */,
 				90C398C71DD6CA6300EFDD6E /* main.m in Sources */,
+				90C399061DD6DFFC00EFDD6E /* MemberViewCell.m in Sources */,
+				90C399031DD6DF9D00EFDD6E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
