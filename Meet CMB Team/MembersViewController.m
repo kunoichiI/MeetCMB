@@ -8,6 +8,8 @@
 
 #import "MembersViewController.h"
 #import "MemberViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface MembersViewController () <UICollectionViewDelegate>
 
@@ -69,13 +71,11 @@ static NSString * const reuseIdentifier = @"Profile";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MemberViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    MemberViewCell *cell = (MemberViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    cell.backgroundColor=[UIColor colorWithRed:145/255.0 green:146/255.0 blue:138/255.0 alpha:1.0];
-    cell.title.text = self.profiles[indexPath.row][@"title"];
+    [cell initWithImage:self.profiles forIndexPath:indexPath];
     
-    cell.name.text = [NSString stringWithFormat:@"%@%@%@",self.profiles[indexPath.row][@"firstName"], @" ", self.profiles[indexPath.row][@"lastName"]];
     return cell;
 }
 

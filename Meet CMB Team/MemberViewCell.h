@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @interface MemberViewCell : UICollectionViewCell
 @property(nonatomic) UILabel *title;
 @property(nonatomic) UILabel *name;
 @property(nonatomic) UIImageView *photo;
-@property(nonatomic) UIImageView *background;
+-(void)initWithImage:(NSArray *) profiles forIndexPath:(NSIndexPath *)indexPath;
 
 @end
