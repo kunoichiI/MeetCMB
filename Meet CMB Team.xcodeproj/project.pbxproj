@@ -22,6 +22,7 @@
 		90C3990C1DD7E31700EFDD6E /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */; };
 		90C3990D1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */; };
 		90C3990E1DD7E31700EFDD6E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */; };
+		90C39E821DD7EF8600EFDD6E /* gradient@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C39E811DD7EF8600EFDD6E /* gradient@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		90C39E811DD7EF8600EFDD6E /* gradient@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gradient@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		90C398C41DD6CA6300EFDD6E /* Meet CMB Team */ = {
 			isa = PBXGroup;
 			children = (
+				90C39E811DD7EF8600EFDD6E /* gradient@3x.png */,
 				90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */,
 				90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */,
 				90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */,
@@ -279,6 +282,7 @@
 				90C3990D1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf in Resources */,
 				90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */,
 				90C398F91DD6CD3900EFDD6E /* team.json in Resources */,
+				90C39E821DD7EF8600EFDD6E /* gradient@3x.png in Resources */,
 				90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */,
 				90C3990E1DD7E31700EFDD6E /* OpenSans-Regular.ttf in Resources */,
 				90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */,

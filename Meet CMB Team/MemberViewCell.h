@@ -12,4 +12,6 @@
 @property(nonatomic) UILabel *title;
 @property(nonatomic) UILabel *name;
 @property(nonatomic) UIImageView *photo;
+@property(nonatomic) UIImageView *background;
+
 @end
