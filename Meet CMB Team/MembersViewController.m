@@ -21,7 +21,6 @@ static NSString * const reuseIdentifier = @"Profile";
 -(instancetype) init {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     
-    layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     layout.itemSize = CGSizeMake(206.0, 206.0);
     layout.minimumInteritemSpacing = 1.0;
     layout.minimumLineSpacing = 1.0;
@@ -73,7 +72,7 @@ static NSString * const reuseIdentifier = @"Profile";
     MemberViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    cell.backgroundColor=[UIColor greenColor];
+    cell.backgroundColor=[UIColor colorWithRed:145/255.0 green:146/255.0 blue:138/255.0 alpha:1.0];
     cell.title.text = self.profiles[indexPath.row][@"title"];
     
     cell.name.text = [NSString stringWithFormat:@"%@%@%@",self.profiles[indexPath.row][@"firstName"], @" ", self.profiles[indexPath.row][@"lastName"]];

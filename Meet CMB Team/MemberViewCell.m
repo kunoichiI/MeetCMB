@@ -14,21 +14,29 @@
 -(id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.title = [[UILabel alloc]initWithFrame:CGRectMake(13, 154, 180, 21)];
-        self.name = [[UILabel alloc]initWithFrame:CGRectMake(13, 175, 180, 21)];
+        self.title = [[UILabel alloc]initWithFrame:CGRectMake(53, 150, 100, 24)];
+        self.name = [[UILabel alloc]initWithFrame:CGRectMake(13, 180, 180, 21)];
         self.background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
-        
         self.background.frame = CGRectMake(28, 28, 150, 150);
+        
+        // configure UILabels and UIImageViews
+        self.title.lineBreakMode = NSLineBreakByWordWrapping;
+        self.title.numberOfLines = 0;
         self.background.contentMode = UIViewContentModeScaleAspectFit;
         self.name.textColor = [UIColor whiteColor];
         self.title.textColor = [UIColor whiteColor];
-        [self.name setFont:[UIFont fontWithName:@"HelveticaNeue" size:13.0f]];
-        [self.title setFont:[UIFont fontWithName:@"HelveticaNeue" size:13.0f]];
+        [self.name setFont:[UIFont fontWithName:@"Symbol" size:14.0f]];
+        [self.title setFont:[UIFont fontWithName:@"Symbol" size:12.0f]];
         self.title.textAlignment = NSTextAlignmentCenter;
         self.name.textAlignment = NSTextAlignmentCenter;
         self.title.backgroundColor = [UIColor clearColor];
         self.name.backgroundColor = [UIColor clearColor];
+        self.background.layer.borderWidth = 1;
+        self.background.layer.borderColor = [[UIColor clearColor] CGColor];
         self.title.layer.shadowColor = [[UIColor blackColor] CGColor];
+        self.background.clipsToBounds = YES;
+        self.background.layer.cornerRadius = 20;
+        
         self.title.layer.shadowRadius = 1.0f;
         self.title.layer.shadowOpacity = 0.5;
         self.title.layer.shadowOffset = CGSizeMake(0,2);
