@@ -6,35 +6,28 @@
 //  Copyright © 2016 Mingyuan Wang. All rights reserved.
 //
 
-#import "MembersViewController.h"
-#import "MemberViewCell.h"
+#import "CMBMembersViewController.h"
+#import "CMBMemberViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "CMBProfileLayout.h"
+
+static NSString * const photoCellIdentifier = @"ProfileCell";
+@interface CMBMembersViewController () <UICollectionViewDelegate>
 
 
-@interface MembersViewController () <UICollectionViewDelegate>
 
 @property(nonatomic) NSArray *profiles;
 @end
 
-@implementation MembersViewController
+@implementation CMBMembersViewController
 
-static NSString * const reuseIdentifier = @"Profile";
 
--(instancetype) init {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    
-    layout.itemSize = CGSizeMake(206.0, 206.0);
-    layout.minimumInteritemSpacing = 1.0;
-    layout.minimumLineSpacing = 1.0;
-    
-    return (self = [self initWithCollectionViewLayout:layout]);
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.collectionView.dataSource = self;
-    self.collectionView.delegate = self;
+    
+    
     self.title = @"Meet CMB";
     
     NSString *file = [[NSBundle mainBundle] pathForResource:@"team" ofType:@"json"];
@@ -47,7 +40,11 @@ static NSString * const reuseIdentifier = @"Profile";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[MemberViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[CMBMemberViewCell class] forCellWithReuseIdentifier:photoCellIdentifier];
+    
+    CMBProfileLayout *layout = [[CMBProfileLayout alloc] init];
+    UICollectionView *myCollectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+
     
     self.collectionView.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
@@ -71,7 +68,7 @@ static NSString * const reuseIdentifier = @"Profile";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MemberViewCell *cell = (MemberViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    CMBMemberViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:photoCellIdentifier forIndexPath:indexPath];
     
     // Configure the cell
     

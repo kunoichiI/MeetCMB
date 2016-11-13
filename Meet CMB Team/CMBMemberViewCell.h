@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "SDWebImage/UIImageView+WebCache.h"
 
-@interface MemberViewCell : UICollectionViewCell
+
+@interface CMBMemberViewCell : UICollectionViewCell
 @property(nonatomic) UILabel *title;
 @property(nonatomic) UILabel *name;
 @property(nonatomic) UIImageView *photo;

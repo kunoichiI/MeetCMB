@@ -1,5 +1,5 @@
 //
-//  MembersViewController.h
+//  AppDelegate.h
 //  Meet CMB Team
 //
 //  Created by Mingyuan Wang on 11/11/16.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MembersViewController : UICollectionViewController
+@interface CMBAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
 
 @end
+

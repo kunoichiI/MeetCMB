@@ -6,21 +6,21 @@
 //  Copyright © 2016 Mingyuan Wang. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "MembersViewController.h"
+#import "CMBAppDelegate.h"
+#import "CMBMembersViewController.h"
 
-@interface AppDelegate ()
+@interface CMBAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation CMBAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    MembersViewController *membersViewController = [[MembersViewController alloc]init];
+    CMBMembersViewController *membersViewController = [[CMBMembersViewController alloc]init];
     UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:membersViewController];
     
     // Set navigation bar title color using the appearance proxy
