@@ -74,7 +74,7 @@ static NSString * const reuseIdentifier = @"Profile";
     MemberViewCell *cell = (MemberViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    [cell initWithImage:self.profiles forIndexPath:indexPath];
+    
     
     return cell;
 }

@@ -13,6 +13,6 @@
 @property(nonatomic) UILabel *title;
 @property(nonatomic) UILabel *name;
 @property(nonatomic) UIImageView *photo;
--(void)initWithImage:(NSArray *) profiles forIndexPath:(NSIndexPath *)indexPath;
 
+-(id)initWithFrame:(CGRect)frame;
 @end
