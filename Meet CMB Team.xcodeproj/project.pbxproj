@@ -23,6 +23,7 @@
 		90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */; };
 		90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C399071DD7DFC500EFDD6E /* placeholder.png */; };
 		90FDA0D71DD98979001CBB2A /* CMB.png in Resources */ = {isa = PBXBuildFile; fileRef = 90FDA0D61DD98979001CBB2A /* CMB.png */; };
+		90FDA0DA1DD990B8001CBB2A /* CMBSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FDA0D91DD990B8001CBB2A /* CMBSearchResultsController.m */; };
 		A142BEB45B45CAA6997D5A7D /* libPods-Meet CMB TeamUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */; };
 		D33CE00C5DFC4AFE91E01420 /* libPods-Meet CMB TeamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D985527803798E5F029276A /* libPods-Meet CMB TeamTests.a */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,8 @@
 		90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberViewCell.m; sourceTree = "<group>"; };
 		90C399071DD7DFC500EFDD6E /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		90FDA0D61DD98979001CBB2A /* CMB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CMB.png; sourceTree = "<group>"; };
+		90FDA0D81DD990B8001CBB2A /* CMBSearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBSearchResultsController.h; sourceTree = "<group>"; };
+		90FDA0D91DD990B8001CBB2A /* CMBSearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSearchResultsController.m; sourceTree = "<group>"; };
 		C0903F70887586A2A17B0DFE /* Pods-Meet CMB TeamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB TeamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB TeamTests/Pods-Meet CMB TeamTests.release.xcconfig"; sourceTree = "<group>"; };
 		D69E4A8337D55C5797ED6416 /* Pods-Meet CMB Team.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB Team.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB Team/Pods-Meet CMB Team.debug.xcconfig"; sourceTree = "<group>"; };
 		F6974E2952E712F19CE56784 /* libPods-Meet CMB Team.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB Team.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,8 @@
 				90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */,
 				908ACE881DD9005C008431F5 /* CMBMemberProfile.h */,
 				908ACE891DD9005C008431F5 /* CMBMemberProfile.m */,
+				90FDA0D81DD990B8001CBB2A /* CMBSearchResultsController.h */,
+				90FDA0D91DD990B8001CBB2A /* CMBSearchResultsController.m */,
 			);
 			path = "Meet CMB Team";
 			sourceTree = "<group>";
@@ -500,6 +505,7 @@
 				90C398C71DD6CA6300EFDD6E /* main.m in Sources */,
 				90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */,
 				90C399031DD6DF9D00EFDD6E /* DetailViewController.m in Sources */,
+				90FDA0DA1DD990B8001CBB2A /* CMBSearchResultsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

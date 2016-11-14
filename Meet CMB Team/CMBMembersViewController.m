@@ -10,14 +10,13 @@
 #import "CMBMemberViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AVFoundation/AVFoundation.h>
+#import "CMBSearchResultsController.h"
 
 static NSString * const photoCellIdentifier = @"ProfileCell";
 @interface CMBMembersViewController () <UICollectionViewDelegate>
 @property(nonatomic) AVAudioPlayer *player;
-@property(nonatomic, strong) UISearchBar *searchBar;
-@property(nonatomic, strong) UIRefreshControl *refreshControl;
-@property(nonatomic) BOOL searchBarActive;
-@property(nonatomic) float searchBarBoundsY;
+@property (nonatomic, strong) UISearchController *searchController;
+@property (nonatomic, strong) NSMutableArray *searchResults;
 
 @end
 
@@ -32,6 +31,15 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     iv.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = iv;
     
+    CMBSearchResultsController *resultsController = [[CMBSearchResultsController alloc]init];
+    UINavigationController *searchResultsController = [[UINavigationController alloc] initWithRootViewController:resultsController];
+    
+    // This instance of UISearchController will use searchResults
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
+    self.searchController.searchBar.placeholder = @"Search people here";
+    
     // Set FlowLayout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     
@@ -43,6 +51,7 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     [self.collectionView registerClass:[CMBMemberViewCell class] forCellWithReuseIdentifier:photoCellIdentifier];
     
     [self.collectionView setBackgroundColor:[UIColor whiteColor]];
+    [self.collectionView addSubview:self.searchController.searchBar];
     
     [self.view addSubview:self.collectionView];
     // Do any additional setup after loading the view.
@@ -109,6 +118,19 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(self.searchBar.frame.size.height, 0, 0, 0);
+    return UIEdgeInsetsMake(44.0, 0, 0, 0);
+}
+
+#pragma mark - <UISearchControllerDelegate & UISearchResultsDelegate>
+// Called when the search bar becomes first responder
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    // set searchString equal to what's typed into the searchbar
+    NSString *searchString = self.searchController.searchBar.text;
+    
+    
+}
+    
+- (void) updateFilteredContentForNameOrTitle:(NSString *)title name:(NSString *)name {
+         
 }
 @end

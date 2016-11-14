@@ -27,11 +27,9 @@
 - (void) updateCellWithProfile: (NSArray *) profiles atIndexPath:(NSIndexPath *) indexPath {
     NSDictionary *element = [profiles objectAtIndex:indexPath.row];
     CMBMemberProfile *profile = [[CMBMemberProfile alloc]initWithTitle:[element objectForKey:@"title"] firstName:[element objectForKey:@"firstName"] lastName:[element objectForKey:@"lastName"] avatar:[element objectForKey:@"avatar"] number:[element objectForKey:@"id"]];
-    
-   
     self.backgroundColor=[UIColor whiteColor];
-    // configure UILabels and UIImageViews
     
+    // configure UILabels and UIImageViews
     self.labelTitle.text = profile.title;
     self.labelName.text = [NSString stringWithFormat:@"%@%@%@", profile.firstName,@"  ", profile.lastName];
     [self.imageViewPhoto sd_setImageWithURL:[NSURL URLWithString:profile.avatar] placeholderImage:[UIImage imageNamed:@"placeholder"]];
@@ -51,7 +49,6 @@
     if (!_labelTitle) {
         _labelTitle = [[UILabel alloc]initWithFrame:CGRectMake(53, 165, 100, 24)];
         _labelTitle.lineBreakMode = NSLineBreakByWordWrapping;
-        //_labelTitle.backgroundColor = [UIColor blackColor];
         _labelTitle.numberOfLines = 0;
         _labelTitle.font = [UIFont openSansBoldFontOfSize:11.0f];
         _labelTitle.textColor = [UIColor lightGrayColor];
@@ -63,7 +60,6 @@
 - (UILabel *)labelName {
     if (!_labelName) {
         _labelName = [[UILabel alloc]initWithFrame:CGRectMake(13, 180, 180, 21)];
-        //_labelName.backgroundColor = [UIColor redColor];
         _labelName.textColor = [UIColor colorWithRed:20.0/255.0 green:101.0/255.0 blue:226.0/255.0 alpha:1.0];
         _labelName.font = [UIFont openSansBoldFontOfSize:14.0f];
         _labelName.textAlignment = NSTextAlignmentCenter;
