@@ -54,7 +54,7 @@
 		7D985527803798E5F029276A /* libPods-Meet CMB TeamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB TeamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E19624A0BAF709282AACC9 /* Pods-Meet CMB Team.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB Team.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB Team/Pods-Meet CMB Team.release.xcconfig"; sourceTree = "<group>"; };
 		8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB TeamUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		906053A41DD9675E009CDADB /* Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sound.mp3; path = ../../../../Downloads/Sound.mp3; sourceTree = "<group>"; };
+		906053A41DD9675E009CDADB /* Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sound.mp3; path = ../Sound.mp3; sourceTree = "<group>"; };
 		908ACE881DD9005C008431F5 /* CMBMemberProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberProfile.h; sourceTree = "<group>"; };
 		908ACE891DD9005C008431F5 /* CMBMemberProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberProfile.m; sourceTree = "<group>"; };
 		908ACE9C1DD964B9008431F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -649,6 +649,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = VEUGRV3R3C;
 				INFOPLIST_FILE = "Meet CMB Team/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cmb.Meet-CMB-Team";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -663,6 +664,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = VEUGRV3R3C;
 				INFOPLIST_FILE = "Meet CMB Team/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cmb.Meet-CMB-Team";
 				PRODUCT_NAME = "$(TARGET_NAME)";

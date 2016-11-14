@@ -8,7 +8,6 @@ target 'Meet CMB Team' do
   # Pods for Meet CMB Team
   pod 'SDWebImage', '~>3.8'
   pod 'OpenSans'
-  pod 'SKSplashView'
   
   target 'Meet CMB TeamTests' do
     inherit! :search_paths
