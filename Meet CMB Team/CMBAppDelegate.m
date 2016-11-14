@@ -20,8 +20,13 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"team" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
     CMBMembersViewController *membersViewController = [[CMBMembersViewController alloc]init];
     UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:membersViewController];
+    membersViewController.profiles = json;
     
     // Set navigation bar title color using the appearance proxy
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:20.0/255.0 green:101.0/255.0 blue:226.0/255.0 alpha:1.0]];

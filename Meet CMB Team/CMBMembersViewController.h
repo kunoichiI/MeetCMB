@@ -10,5 +10,6 @@
 
 @interface CMBMembersViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property(nonatomic, strong) UICollectionView *collectionView;
+@property(nonatomic) NSArray *profiles;
 
 @end

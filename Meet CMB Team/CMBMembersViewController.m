@@ -15,7 +15,7 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 
 
 
-@property(nonatomic) NSArray *profiles;
+
 @end
 
 @implementation CMBMembersViewController
@@ -30,10 +30,7 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     self.title = @"Meet CMB";
     
     
-    NSString *file = [[NSBundle mainBundle] pathForResource:@"team" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:file];
-    NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    self.profiles = json;
+    
     NSLog(@"%@", [self.profiles[0] class]);
 
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];

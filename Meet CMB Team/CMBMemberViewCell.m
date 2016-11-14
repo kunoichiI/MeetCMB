@@ -76,7 +76,7 @@
 
 - (UIImageView *)imageViewPhoto {
     if (!_imageViewPhoto) {
-        _imageViewPhoto = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 150, 150)];
+        _imageViewPhoto = [[UIImageView alloc]initWithFrame:CGRectMake(28, 28, 130, 130)];
         _imageViewPhoto.layer.cornerRadius = _imageViewPhoto.frame.size.width / 2;
         _imageViewPhoto.clipsToBounds = YES;
         _imageViewPhoto.contentMode = UIViewContentModeScaleAspectFit;
