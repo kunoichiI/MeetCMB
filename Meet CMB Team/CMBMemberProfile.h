@@ -13,8 +13,8 @@
 @property(nonatomic, strong) NSString *firstName;
 @property(nonatomic, strong) NSString *lastName;
 @property(nonatomic, strong) NSString *avatar;
-@property(nonatomic, strong) NSString *number;
+@property(nonatomic, strong) NSString *bio;
 
-- (id) initWithTitle:(NSString *) title firstName:(NSString *)firstName lastName:(NSString *)lastName avatar:(NSString *)avatar number:(NSString *) no_;
+- (id) initWithTitle:(NSString *) title firstName:(NSString *)firstName lastName:(NSString *)lastName avatar:(NSString *)avatar bio:(NSString *) bio;
 
 @end

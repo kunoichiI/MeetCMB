@@ -19,7 +19,7 @@
 		90C398F91DD6CD3900EFDD6E /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 90C398F81DD6CD3900EFDD6E /* team.json */; };
 		90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */; };
 		90C398FE1DD6D0AC00EFDD6E /* CMBMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398FD1DD6D0AC00EFDD6E /* CMBMembersViewController.m */; };
-		90C399031DD6DF9D00EFDD6E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399021DD6DF9D00EFDD6E /* DetailViewController.m */; };
+		90C399031DD6DF9D00EFDD6E /* CMBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399021DD6DF9D00EFDD6E /* CMBDetailViewController.m */; };
 		90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */; };
 		90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C399071DD7DFC500EFDD6E /* placeholder.png */; };
 		90FDA0D71DD98979001CBB2A /* CMB.png in Resources */ = {isa = PBXBuildFile; fileRef = 90FDA0D61DD98979001CBB2A /* CMB.png */; };
@@ -72,8 +72,8 @@
 		90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		90C398FC1DD6D0AC00EFDD6E /* CMBMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMembersViewController.h; sourceTree = "<group>"; };
 		90C398FD1DD6D0AC00EFDD6E /* CMBMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMembersViewController.m; sourceTree = "<group>"; };
-		90C399011DD6DF9D00EFDD6E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		90C399021DD6DF9D00EFDD6E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		90C399011DD6DF9D00EFDD6E /* CMBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBDetailViewController.h; sourceTree = "<group>"; };
+		90C399021DD6DF9D00EFDD6E /* CMBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBDetailViewController.m; sourceTree = "<group>"; };
 		90C399041DD6DFFC00EFDD6E /* CMBMemberViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberViewCell.h; sourceTree = "<group>"; };
 		90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberViewCell.m; sourceTree = "<group>"; };
 		90C399071DD7DFC500EFDD6E /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
@@ -162,8 +162,8 @@
 				90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */,
 				90C398FC1DD6D0AC00EFDD6E /* CMBMembersViewController.h */,
 				90C398FD1DD6D0AC00EFDD6E /* CMBMembersViewController.m */,
-				90C399011DD6DF9D00EFDD6E /* DetailViewController.h */,
-				90C399021DD6DF9D00EFDD6E /* DetailViewController.m */,
+				90C399011DD6DF9D00EFDD6E /* CMBDetailViewController.h */,
+				90C399021DD6DF9D00EFDD6E /* CMBDetailViewController.m */,
 				90C399041DD6DFFC00EFDD6E /* CMBMemberViewCell.h */,
 				90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */,
 				908ACE881DD9005C008431F5 /* CMBMemberProfile.h */,
@@ -504,7 +504,7 @@
 				90C398CA1DD6CA6300EFDD6E /* CMBAppDelegate.m in Sources */,
 				90C398C71DD6CA6300EFDD6E /* main.m in Sources */,
 				90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */,
-				90C399031DD6DF9D00EFDD6E /* DetailViewController.m in Sources */,
+				90C399031DD6DF9D00EFDD6E /* CMBDetailViewController.m in Sources */,
 				90FDA0DA1DD990B8001CBB2A /* CMBSearchResultsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

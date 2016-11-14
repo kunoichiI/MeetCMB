@@ -10,7 +10,7 @@
 
 @implementation CMBMemberProfile
 
-- (id) initWithTitle:(NSString *) title firstName:(NSString *)firstName lastName:(NSString *)lastName avatar:(NSString *)avatar number:(NSString *) no_ {
+- (id) initWithTitle:(NSString *) title firstName:(NSString *)firstName lastName:(NSString *)lastName avatar:(NSString *)avatar bio:(NSString *) bio {
     self = [super init];
     
     if (self) {
@@ -18,7 +18,7 @@
         self.firstName = firstName;
         self.lastName = lastName;
         self.avatar = avatar;
-        self.number = no_;
+        self.bio = bio;
     }
     return self;
 }

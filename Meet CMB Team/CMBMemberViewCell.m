@@ -26,7 +26,7 @@
 
 - (void) updateCellWithProfile: (NSArray *) profiles atIndexPath:(NSIndexPath *) indexPath {
     NSDictionary *element = [profiles objectAtIndex:indexPath.row];
-    CMBMemberProfile *profile = [[CMBMemberProfile alloc]initWithTitle:[element objectForKey:@"title"] firstName:[element objectForKey:@"firstName"] lastName:[element objectForKey:@"lastName"] avatar:[element objectForKey:@"avatar"] number:[element objectForKey:@"id"]];
+    CMBMemberProfile *profile = [[CMBMemberProfile alloc]initWithTitle:[element objectForKey:@"title"] firstName:[element objectForKey:@"firstName"] lastName:[element objectForKey:@"lastName"] avatar:[element objectForKey:@"avatar"] bio:[element objectForKey:@"bio"]];
     self.backgroundColor=[UIColor whiteColor];
     
     // configure UILabels and UIImageViews

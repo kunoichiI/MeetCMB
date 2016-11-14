@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMBMemberProfile.h"
 
-@interface DetailViewController : UIViewController
+@interface CMBDetailViewController : UIViewController
+@property (nonatomic, strong) CMBMemberProfile *profile;
 
 @end

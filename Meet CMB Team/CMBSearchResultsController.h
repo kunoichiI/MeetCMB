@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMBSearchResultsController : UIViewController
+@interface CMBSearchResultsController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
 @property(nonatomic, strong) NSArray *filteredProfiles;
 @property(nonatomic, strong) UICollectionView *collectionView;
 

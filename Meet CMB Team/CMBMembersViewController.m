@@ -12,6 +12,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "CMBSearchResultsController.h"
 #import "CMBMemberProfile.h"
+#import "CMBDetailViewController.h"
 
 static NSString * const photoCellIdentifier = @"ProfileCell";
 @interface CMBMembersViewController () <UICollectionViewDelegate>
@@ -20,6 +21,9 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 @property (nonatomic, strong) NSMutableArray *searchResults;
 @property (nonatomic, strong) CMBSearchResultsController *resultsCollectionController;
 
+// for state restoration
+@property BOOL searchControllerWasActive;
+@property BOOL searchControllerSearchFieldWasFirstResponder;
 @end
 
 @implementation CMBMembersViewController
@@ -37,9 +41,14 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     _searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultsCollectionController];
     [self.searchController.searchBar sizeToFit];
     
+    // set the delegate for our filtered collection view
+    self.resultsCollectionController.collectionView.delegate = self;
     self.searchController.searchResultsUpdater = self;
     self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
     self.searchController.searchBar.placeholder = @"Search people here";
+    self.searchController.searchBar.delegate = self;
+    self.searchController.dimsBackgroundDuringPresentation = YES;
+    self.definesPresentationContext = YES; // know where UISearchController to be displayed
     
     // Set FlowLayout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
@@ -58,6 +67,27 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     // Do any additional setup after loading the view.
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    // restore the searchController's active state
+    if (self.searchControllerWasActive) {
+        self.searchController.active = self.searchControllerWasActive;
+        _searchControllerWasActive = NO;
+        
+        if (self.searchControllerSearchFieldWasFirstResponder) {
+            [self.searchController.searchBar becomeFirstResponder];
+            _searchControllerSearchFieldWasFirstResponder = NO;
+        }
+    }
+}
+
+#pragma mark - <UISearchBarDelegate>
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+}
+
+#pragma mark - <MemoryWarningInfo>
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -87,6 +117,7 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    // play sound whenever you tap a cell
     NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
     NSString *path = [NSString stringWithFormat:@"%@/sound.mp3", resourcePath];
     
@@ -97,6 +128,14 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     self.player.numberOfLoops = 0;
     self.player.delegate = self;
     [self.player play];
+    
+    NSDictionary *selectedProfile = (collectionView == self.collectionView)? self.profiles[indexPath.row] :self.resultsCollectionController.filteredProfiles[indexPath.row];
+    CMBDetailViewController *detailViewController = [[CMBDetailViewController alloc]init];
+    detailViewController.profile = [[CMBMemberProfile alloc] initWithTitle:selectedProfile[@"title"] firstName:selectedProfile[@"firstName"] lastName:selectedProfile[@"lastName"] avatar:selectedProfile[@"avatar"] bio:selectedProfile[@"bio"]];
+    NSLog(@"%@", [detailViewController.profile class]);
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
 
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
@@ -166,22 +205,6 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     NSLog(@"%@", searchResults);
     [collectionviewController.collectionView reloadData];
     
-}
-    
-- (void) updateFilteredContentForNameOrTitle:(NSString *)title name:(NSString *)name {
-    if (title == nil && name == nil) { // if no input is detected
-        self.searchResults = [self.profiles mutableCopy];
-    } else if (title != nil) {
-        NSMutableArray *searchResults = [[NSMutableArray alloc] init];
-        for (NSDictionary *profile in self.profiles) {
-            if ([profile[@"title"] containsString:title]) {
-                CMBMemberProfile *member = [[CMBMemberProfile alloc]initWithTitle:profile[@"title"] firstName:profile[@"firstName"] lastName:profile[@"lastName"] avatar:profile[@"avatar"] number:profile[@"number"]];
-                [searchResults addObject:member];
-            }
-            self.searchResults = searchResults;
-        
-        }
-    }
 }
 
 @end
