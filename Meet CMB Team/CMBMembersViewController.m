@@ -21,9 +21,7 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 @property (nonatomic, strong) NSMutableArray *searchResults;
 @property (nonatomic, strong) CMBSearchResultsController *resultsCollectionController;
 
-// for state restoration
-@property BOOL searchControllerWasActive;
-@property BOOL searchControllerSearchFieldWasFirstResponder;
+
 @end
 
 @implementation CMBMembersViewController
@@ -66,22 +64,6 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     [self.view addSubview:self.collectionView];
     // Do any additional setup after loading the view.
 }
-
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    // restore the searchController's active state
-    if (self.searchControllerWasActive) {
-        self.searchController.active = self.searchControllerWasActive;
-        _searchControllerWasActive = NO;
-        
-        if (self.searchControllerSearchFieldWasFirstResponder) {
-            [self.searchController.searchBar becomeFirstResponder];
-            _searchControllerSearchFieldWasFirstResponder = NO;
-        }
-    }
-}
-
 
 #pragma mark - UISearchControllerDelegate
 
@@ -202,76 +184,31 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     // set searchString equal to what's typed into the searchbar
     NSString *searchString = searchController.searchBar.text;
+    [self updateFilteredContentForMemberProfile:searchString];
+    
+    // If searchResultsController
+    if (self.searchController.searchResultsController) {
+            CMBSearchResultsController *collectionviewController = (CMBSearchResultsController *)self.searchController.searchResultsController;
+        NSLog(@"%@", collectionviewController);
+            collectionviewController.filteredProfiles = self.searchResults;
+            NSLog(@"%@", self.searchResults);
+            [collectionviewController.collectionView reloadData];
+        }
+    
+}
+
+- (void)updateFilteredContentForMemberProfile:(NSString *)searchString {
     NSMutableArray *searchResults = [self.profiles mutableCopy];
     
     if (searchString != nil) {
         searchResults = [[NSMutableArray alloc] init];
         for (NSDictionary *profile in self.profiles) {
-            if ([profile[@"firstName"] containsString:searchString] || [profile[@"lastName"] containsString:searchString] || [profile[@"title"] containsString:searchString]) {
+            if ([profile[@"firstName"] localizedCaseInsensitiveContainsString:searchString] || [profile[@"lastName"] localizedCaseInsensitiveContainsString:searchString] || [profile[@"title"] localizedCaseInsensitiveContainsString:searchString]) {
                 [searchResults addObject:profile];
             }
+            self.searchResults = searchResults;
         }
     }
-    
-        // hand over the filtered results to out search results collectionview
-    CMBSearchResultsController *collectionviewController = (CMBSearchResultsController *)self.searchController.searchResultsController;
-    collectionviewController.filteredProfiles = searchResults;
-    NSLog(@"%@", searchResults);
-    [collectionviewController.collectionView reloadData];
-    
 }
 
-#pragma mark - <UIStateRestoration>
-
-// restore several items for state restoration:
-// 1) Search Controller's active state,
-// 2) Search text,
-// 3) first responder
-
-NSString *const ViewControllerTitleKey = @"VIewControllerTitleKey";
-NSString *const SearchControllerIsActiveKey = @"SearchControllerIsActiveKey";
-NSString *const SearchBarTextKey = @"SearchBarTextKey";
-NSString *const SearchBarIsFirstResponderKey = @"SearchBarIsFirstREsponderKey";
-
-- (void) encodeRestorableStateWithCoder:(NSCoder *)coder {
-    [super encodeRestorableStateWithCoder:coder];
-    
-    // encode the view state so it can be restored later
-    // encode the title
-    [coder encodeObject:self.title forKey:ViewControllerTitleKey];
-    
-    UISearchController *searchController = self.searchController;
-    
-    // encode the search controller's active state
-    BOOL searchDisplayControllerIsActive = searchController.isActive;
-    [coder encodeBool:searchDisplayControllerIsActive forKey:SearchControllerIsActiveKey];
-    
-    // encode the first responder status
-    if (searchDisplayControllerIsActive) {
-        [coder encodeBool:[searchController.searchBar isFirstResponder] forKey:SearchBarIsFirstResponderKey];
-    }
-    
-    // encode the searchBar text
-    [coder encodeObject:searchController.searchBar.text forKey:SearchBarTextKey];
-}
-
-- (void) decodeRestorableStateWithCoder:(NSCoder *)coder {
-    [super decodeRestorableStateWithCoder:coder];
-    
-    // restore the title
-    self.title = [coder decodeObjectForKey:ViewControllerTitleKey];
-    
-    // restore the active state
-    // we can't make the searchController active here since it's not part of the view
-    // hierarchy yet, instead we do it in viewWillAppear
-    _searchControllerWasActive = [coder decodeBoolForKey:SearchControllerIsActiveKey];
-    
-    // restore the first responder status:
-    // we can't make the searchController first responder here since it's not part of the view
-    // hierarchy yet, instead we do it in viewWillAppear
-    _searchControllerSearchFieldWasFirstResponder = [coder decodeBoolForKey:SearchBarIsFirstResponderKey];
-    
-    // restore the text in the search field
-    self.searchController.searchBar.text =[coder decodeObjectForKey:SearchBarTextKey];
-}
 @end
