@@ -29,14 +29,12 @@
     CMBMemberProfile *profile = [[CMBMemberProfile alloc]initWithTitle:[element objectForKey:@"title"] firstName:[element objectForKey:@"firstName"] lastName:[element objectForKey:@"lastName"] avatar:[element objectForKey:@"avatar"] number:[element objectForKey:@"id"]];
     
    
-    self.backgroundColor=[UIColor colorWithRed:213/255.0 green:205/255.0 blue:187/255.0 alpha:1.0]; // cell background color
-    
+    self.backgroundColor=[UIColor whiteColor];
     // configure UILabels and UIImageViews
     
     self.labelTitle.text = profile.title;
     self.labelName.text = [NSString stringWithFormat:@"%@%@%@", profile.firstName,@"  ", profile.lastName];
     [self.imageViewPhoto sd_setImageWithURL:[NSURL URLWithString:profile.avatar] placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    
     
     [self addSubview:self.imageViewPhoto];
     [self addSubview:self.labelTitle];
@@ -51,12 +49,12 @@
 
 - (UILabel *)labelTitle {
     if (!_labelTitle) {
-        _labelTitle = [[UILabel alloc]initWithFrame:CGRectMake(53, 160, 100, 24)];
+        _labelTitle = [[UILabel alloc]initWithFrame:CGRectMake(53, 165, 100, 24)];
         _labelTitle.lineBreakMode = NSLineBreakByWordWrapping;
         //_labelTitle.backgroundColor = [UIColor blackColor];
         _labelTitle.numberOfLines = 0;
         _labelTitle.font = [UIFont openSansBoldFontOfSize:11.0f];
-        _labelTitle.textColor = [UIColor blackColor];
+        _labelTitle.textColor = [UIColor lightGrayColor];
         _labelTitle.textAlignment = NSTextAlignmentCenter;
     }
     return _labelTitle;
@@ -66,7 +64,7 @@
     if (!_labelName) {
         _labelName = [[UILabel alloc]initWithFrame:CGRectMake(13, 180, 180, 21)];
         //_labelName.backgroundColor = [UIColor redColor];
-        _labelName.textColor = [UIColor blackColor];
+        _labelName.textColor = [UIColor colorWithRed:20.0/255.0 green:101.0/255.0 blue:226.0/255.0 alpha:1.0];
         _labelName.font = [UIFont openSansBoldFontOfSize:14.0f];
         _labelName.textAlignment = NSTextAlignmentCenter;
         
@@ -76,13 +74,11 @@
 
 - (UIImageView *)imageViewPhoto {
     if (!_imageViewPhoto) {
-        _imageViewPhoto = [[UIImageView alloc]initWithFrame:CGRectMake(28, 28, 130, 130)];
+        _imageViewPhoto = [[UIImageView alloc]initWithFrame:CGRectMake(30, 30, 135, 135)];
         _imageViewPhoto.layer.cornerRadius = _imageViewPhoto.frame.size.width / 2;
         _imageViewPhoto.clipsToBounds = YES;
         _imageViewPhoto.contentMode = UIViewContentModeScaleAspectFit;
         _imageViewPhoto.backgroundColor = [UIColor blueColor];
-        _imageViewPhoto.layer.borderWidth = 3.0f;
-        _imageViewPhoto.layer.borderColor = [UIColor whiteColor].CGColor;
     }
     return _imageViewPhoto;
 }

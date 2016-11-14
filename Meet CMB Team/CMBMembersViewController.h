@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMBMembersViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface CMBMembersViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate,UISearchResultsUpdating, UISearchControllerDelegate>
 @property(nonatomic, strong) UICollectionView *collectionView;
 @property(nonatomic) NSArray *profiles;
 

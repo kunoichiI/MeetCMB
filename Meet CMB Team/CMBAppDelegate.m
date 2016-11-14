@@ -29,8 +29,8 @@
     membersViewController.profiles = json;
     
     // Set navigation bar title color using the appearance proxy
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:20.0/255.0 green:101.0/255.0 blue:226.0/255.0 alpha:1.0]];
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
     
     self.window.rootViewController = naviController;
     self.window.backgroundColor = [UIColor whiteColor];

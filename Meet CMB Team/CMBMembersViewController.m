@@ -13,7 +13,11 @@
 
 static NSString * const photoCellIdentifier = @"ProfileCell";
 @interface CMBMembersViewController () <UICollectionViewDelegate>
-@property(nonatomic, strong) AVAudioPlayer *player;
+@property(nonatomic) AVAudioPlayer *player;
+@property(nonatomic, strong) UISearchBar *searchBar;
+@property(nonatomic, strong) UIRefreshControl *refreshControl;
+@property(nonatomic) BOOL searchBarActive;
+@property(nonatomic) float searchBarBoundsY;
 
 @end
 
@@ -23,14 +27,18 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Meet CMB";
+    UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 32)];
+    iv.image = [UIImage imageNamed:@"CMB"];
+    iv.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = iv;
     
-
+    // Set FlowLayout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:layout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    
     
     [self.collectionView registerClass:[CMBMemberViewCell class] forCellWithReuseIdentifier:photoCellIdentifier];
     
@@ -86,6 +94,7 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     NSLog(@"%d",flag);
 }
 
+
 #pragma mark <UICollectionViewDelegateFlowLayout>
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(206.0, 206.0);
@@ -100,6 +109,6 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, 0, 0, 0);
+    return UIEdgeInsetsMake(self.searchBar.frame.size.height, 0, 0, 0);
 }
 @end
