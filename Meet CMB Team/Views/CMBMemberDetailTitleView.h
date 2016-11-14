@@ -1,5 +1,5 @@
 //
-//  UIFont+CMB.h
+//  CMBMemberDetailTitleView.h
 //  Meet CMB Team
 //
 //  Created by Mingyuan Wang on 11/14/16.
@@ -8,14 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIFont (CMB)
+@interface CMBMemberDetailTitleView : UIView
 
-+ (UIFont *)labelTitleFont;
-
-+ (UIFont *)labelNameFont;
-
-+ (UIFont *)navBarTitleFont;
-
-+ (UIFont *)textViewBioFont;
+- (instancetype)initWithProfile:(CMBMemberProfile *)profile;
 
 @end

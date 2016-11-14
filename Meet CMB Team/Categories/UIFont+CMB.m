@@ -18,4 +18,12 @@
     return [UIFont openSansBoldFontOfSize:14.0f];
 }
 
++ (UIFont *)navBarTitleFont {
+    return [UIFont openSansBoldFontOfSize:16.0f];
+}
+
++ (UIFont *)textViewBioFont {
+    return [UIFont openSansFontOfSize:14.0f];
+}
+
 @end

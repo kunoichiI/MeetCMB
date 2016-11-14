@@ -8,14 +8,28 @@
 
 #import "CMBAudioHelper.h"
 
+@interface CMBAudioHelper()
+
+@property (nonatomic) AVAudioPlayer *player;
+
+@end
+
 @implementation CMBAudioHelper
 
-+ (void)playBlingSound {
-    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
-    NSString *path = [NSString stringWithFormat:@"%@/sound.mp3", resourcePath];
-    NSURL *fileURL = [NSURL fileURLWithPath:path];
-    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-    [player play];
++ (instancetype)sharedHelper {
+    static dispatch_once_t token;
+    static CMBAudioHelper *sharedHelper;
+    dispatch_once(&token, ^{
+        sharedHelper = [[CMBAudioHelper alloc] init];
+    });
+    return sharedHelper;
+}
+
+- (void)playBlingSound {
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"sound" ofType:@"wav"];
+    NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    [self.player play];
 }
 
 @end

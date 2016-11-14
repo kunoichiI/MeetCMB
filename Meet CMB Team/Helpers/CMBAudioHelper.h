@@ -11,6 +11,7 @@
 
 @interface CMBAudioHelper : NSObject
 
-+ (void)playBlingSound;
++ (instancetype)sharedHelper;
+- (void)playBlingSound;
 
 @end

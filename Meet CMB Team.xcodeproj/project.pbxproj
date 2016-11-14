@@ -17,15 +17,15 @@
 		90C398F91DD6CD3900EFDD6E /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 90C398F81DD6CD3900EFDD6E /* team.json */; };
 		A142BEB45B45CAA6997D5A7D /* libPods-Meet CMB TeamUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */; };
 		D33CE00C5DFC4AFE91E01420 /* libPods-Meet CMB TeamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D985527803798E5F029276A /* libPods-Meet CMB TeamTests.a */; };
-		DA1948621DDA63DB0082E754 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA1948611DDA63DB0082E754 /* sound.mp3 */; };
+		DA0031FA1DDA72400019D0E3 /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA0031F91DDA72400019D0E3 /* sound.wav */; };
+		DA0031FE1DDA77E40019D0E3 /* CMBMemberDetailTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0031FD1DDA77E40019D0E3 /* CMBMemberDetailTitleView.m */; };
 		DA1948791DDA649C0082E754 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948651DDA649C0082E754 /* UIView+Utilities.m */; };
 		DA19487A1DDA649C0082E754 /* CMBMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948681DDA649C0082E754 /* CMBMemberCell.m */; };
 		DA19487B1DDA649C0082E754 /* CMBAudioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DA19486B1DDA649C0082E754 /* CMBAudioHelper.m */; };
 		DA19487C1DDA649C0082E754 /* CMBMemberProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA19486E1DDA649C0082E754 /* CMBMemberProfile.m */; };
 		DA19487D1DDA649C0082E754 /* CMBService.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948711DDA649C0082E754 /* CMBService.m */; };
-		DA19487E1DDA649C0082E754 /* CMBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948741DDA649C0082E754 /* CMBDetailViewController.m */; };
+		DA19487E1DDA649C0082E754 /* CMBMemberDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948741DDA649C0082E754 /* CMBMemberDetailViewController.m */; };
 		DA19487F1DDA649C0082E754 /* CMBMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948761DDA649C0082E754 /* CMBMembersViewController.m */; };
-		DA1948801DDA649C0082E754 /* CMBSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948781DDA649C0082E754 /* CMBSearchResultsController.m */; };
 		DAF2ADFB1DDA6E670068F8F9 /* UIColor+CMB.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF2ADFA1DDA6E670068F8F9 /* UIColor+CMB.m */; };
 		DAF2ADFE1DDA6EB70068F8F9 /* UIFont+CMB.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF2ADFD1DDA6EB70068F8F9 /* UIFont+CMB.m */; };
 /* End PBXBuildFile section */
@@ -70,8 +70,10 @@
 		90C398F81DD6CD3900EFDD6E /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = team.json; sourceTree = "<group>"; };
 		C0903F70887586A2A17B0DFE /* Pods-Meet CMB TeamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB TeamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB TeamTests/Pods-Meet CMB TeamTests.release.xcconfig"; sourceTree = "<group>"; };
 		D69E4A8337D55C5797ED6416 /* Pods-Meet CMB Team.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB Team.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB Team/Pods-Meet CMB Team.debug.xcconfig"; sourceTree = "<group>"; };
+		DA0031F91DDA72400019D0E3 /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
+		DA0031FC1DDA77E40019D0E3 /* CMBMemberDetailTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberDetailTitleView.h; sourceTree = "<group>"; };
+		DA0031FD1DDA77E40019D0E3 /* CMBMemberDetailTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberDetailTitleView.m; sourceTree = "<group>"; };
 		DA1948571DDA4CCE0082E754 /* CMB-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMB-Prefix.pch"; sourceTree = "<group>"; };
-		DA1948611DDA63DB0082E754 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		DA1948641DDA649C0082E754 /* UIView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utilities.h"; sourceTree = "<group>"; };
 		DA1948651DDA649C0082E754 /* UIView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utilities.m"; sourceTree = "<group>"; };
 		DA1948671DDA649C0082E754 /* CMBMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberCell.h; sourceTree = "<group>"; };
@@ -82,12 +84,10 @@
 		DA19486E1DDA649C0082E754 /* CMBMemberProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberProfile.m; sourceTree = "<group>"; };
 		DA1948701DDA649C0082E754 /* CMBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBService.h; sourceTree = "<group>"; };
 		DA1948711DDA649C0082E754 /* CMBService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBService.m; sourceTree = "<group>"; };
-		DA1948731DDA649C0082E754 /* CMBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBDetailViewController.h; sourceTree = "<group>"; };
-		DA1948741DDA649C0082E754 /* CMBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBDetailViewController.m; sourceTree = "<group>"; };
+		DA1948731DDA649C0082E754 /* CMBMemberDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberDetailViewController.h; sourceTree = "<group>"; };
+		DA1948741DDA649C0082E754 /* CMBMemberDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberDetailViewController.m; sourceTree = "<group>"; };
 		DA1948751DDA649C0082E754 /* CMBMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMembersViewController.h; sourceTree = "<group>"; };
 		DA1948761DDA649C0082E754 /* CMBMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMembersViewController.m; sourceTree = "<group>"; };
-		DA1948771DDA649C0082E754 /* CMBSearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBSearchResultsController.h; sourceTree = "<group>"; };
-		DA1948781DDA649C0082E754 /* CMBSearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSearchResultsController.m; sourceTree = "<group>"; };
 		DAF2ADF91DDA6E670068F8F9 /* UIColor+CMB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CMB.h"; sourceTree = "<group>"; };
 		DAF2ADFA1DDA6E670068F8F9 /* UIColor+CMB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CMB.m"; sourceTree = "<group>"; };
 		DAF2ADFC1DDA6EB70068F8F9 /* UIFont+CMB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CMB.h"; sourceTree = "<group>"; };
@@ -160,6 +160,7 @@
 		90C398C41DD6CA6300EFDD6E /* Meet CMB Team */ = {
 			isa = PBXGroup;
 			children = (
+				DA0031FB1DDA77C50019D0E3 /* Views */,
 				DA1948631DDA649C0082E754 /* Categories */,
 				DA1948661DDA649C0082E754 /* Cells */,
 				DA1948691DDA649C0082E754 /* Helpers */,
@@ -179,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				DA1948571DDA4CCE0082E754 /* CMB-Prefix.pch */,
-				DA1948611DDA63DB0082E754 /* sound.mp3 */,
+				DA0031F91DDA72400019D0E3 /* sound.wav */,
 				90C398F81DD6CD3900EFDD6E /* team.json */,
 				90C398C61DD6CA6300EFDD6E /* main.m */,
 			);
@@ -215,6 +216,15 @@
 				01E5C31C4AC139C39E298622 /* Pods-Meet CMB TeamUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA0031FB1DDA77C50019D0E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA0031FC1DDA77E40019D0E3 /* CMBMemberDetailTitleView.h */,
+				DA0031FD1DDA77E40019D0E3 /* CMBMemberDetailTitleView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DA1948631DDA649C0082E754 /* Categories */ = {
@@ -271,10 +281,8 @@
 			children = (
 				DA1948751DDA649C0082E754 /* CMBMembersViewController.h */,
 				DA1948761DDA649C0082E754 /* CMBMembersViewController.m */,
-				DA1948771DDA649C0082E754 /* CMBSearchResultsController.h */,
-				DA1948781DDA649C0082E754 /* CMBSearchResultsController.m */,
-				DA1948731DDA649C0082E754 /* CMBDetailViewController.h */,
-				DA1948741DDA649C0082E754 /* CMBDetailViewController.m */,
+				DA1948731DDA649C0082E754 /* CMBMemberDetailViewController.h */,
+				DA1948741DDA649C0082E754 /* CMBMemberDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -399,7 +407,7 @@
 			files = (
 				90C398F91DD6CD3900EFDD6E /* team.json in Resources */,
 				90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */,
-				DA1948621DDA63DB0082E754 /* sound.mp3 in Resources */,
+				DA0031FA1DDA72400019D0E3 /* sound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,15 +570,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA19487E1DDA649C0082E754 /* CMBDetailViewController.m in Sources */,
+				DA19487E1DDA649C0082E754 /* CMBMemberDetailViewController.m in Sources */,
 				DAF2ADFE1DDA6EB70068F8F9 /* UIFont+CMB.m in Sources */,
 				DA19487F1DDA649C0082E754 /* CMBMembersViewController.m in Sources */,
 				DA19487D1DDA649C0082E754 /* CMBService.m in Sources */,
 				DA19487C1DDA649C0082E754 /* CMBMemberProfile.m in Sources */,
 				90C398CA1DD6CA6300EFDD6E /* CMBAppDelegate.m in Sources */,
 				DA1948791DDA649C0082E754 /* UIView+Utilities.m in Sources */,
+				DA0031FE1DDA77E40019D0E3 /* CMBMemberDetailTitleView.m in Sources */,
 				90C398C71DD6CA6300EFDD6E /* main.m in Sources */,
-				DA1948801DDA649C0082E754 /* CMBSearchResultsController.m in Sources */,
 				DA19487B1DDA649C0082E754 /* CMBAudioHelper.m in Sources */,
 				DAF2ADFB1DDA6E670068F8F9 /* UIColor+CMB.m in Sources */,
 				DA19487A1DDA649C0082E754 /* CMBMemberCell.m in Sources */,

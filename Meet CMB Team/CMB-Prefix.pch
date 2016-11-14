@@ -12,6 +12,8 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+#define kStatusAndNavBarHeight 64
+
 #define IPHONE6or7PLUS [UIScreen mainScreen].bounds.size.height == 736
 #define IPHONE6or7 [UIScreen mainScreen].bounds.size.height == 667
 #define IPHONE5 [UIScreen mainScreen].bounds.size.height == 568

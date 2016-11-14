@@ -1,5 +1,5 @@
 //
-//  CMBDetailViewController.h
+//  CMBMemberDetailViewController.h
 //  Meet CMB Team
 //
 //  Created by Mingyuan Wang on 11/11/16.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMBDetailViewController : UIViewController
+#define kImageViewPhotoHeight ScreenWidth * 2.0 / 3.0
+
+@interface CMBMemberDetailViewController : UIViewController
 
 @property (nonatomic, strong) CMBMemberProfile *profile;
 
