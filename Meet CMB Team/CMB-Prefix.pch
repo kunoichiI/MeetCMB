@@ -36,6 +36,8 @@
 #import "CMBService.h"
 
 #import "UIView+Utilities.h"
+#import "UIColor+CMB.h"
+#import "UIFont+CMB.h"
 
 #import "CMBAudioHelper.h"
 

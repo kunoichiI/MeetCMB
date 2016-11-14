@@ -6,8 +6,8 @@ target 'Meet CMB Team' do
   # use_frameworks!
 
   # Pods for Meet CMB Team
-  pod 'SDWebImage', '~>3.8'
-  pod 'OpenSans'
+  pod 'SDWebImage', '3.8.2'
+  pod 'OpenSans', '1.0.3'
   
   target 'Meet CMB TeamTests' do
     inherit! :search_paths

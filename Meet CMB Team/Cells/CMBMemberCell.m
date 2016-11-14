@@ -40,7 +40,7 @@
         _labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(kGreatPadding, CGRectGetMaxY(self.imageViewPhoto.frame) + kGreatPadding, width, kLabelTitleHeight)];
         _labelTitle.lineBreakMode = NSLineBreakByWordWrapping;
         _labelTitle.numberOfLines = 0;
-        _labelTitle.font = [UIFont openSansBoldFontOfSize:12.0f];
+        _labelTitle.font = [UIFont labelTitleFont];
         _labelTitle.textColor = [UIColor lightGrayColor];
         _labelTitle.textAlignment = NSTextAlignmentCenter;
     }
@@ -51,8 +51,8 @@
     if (!_labelName) {
         CGFloat width = CGRectGetWidth(self.bounds) - kGreatPadding * 2;
         _labelName = [[UILabel alloc] initWithFrame:CGRectMake(kGreatPadding, CGRectGetMaxY(self.labelTitle.frame), width, kLabelNameHeight)];
-        _labelName.textColor = [UIColor colorWithRed:20.0/255.0 green:101.0/255.0 blue:226.0/255.0 alpha:1.0];
-        _labelName.font = [UIFont openSansBoldFontOfSize:14.0f];
+        _labelName.textColor = [UIColor themeColor];
+        _labelName.font = [UIFont labelNameFont];
         _labelName.textAlignment = NSTextAlignmentCenter;
     }
     return _labelName;
