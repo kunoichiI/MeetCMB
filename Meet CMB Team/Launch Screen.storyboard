@@ -33,16 +33,15 @@
                                 <color key="textColor" red="0.2470588235" green="0.3803921569" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet CMB Team" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="20" y="204" width="335" height="40"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meet CMB Team" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="20" y="260" width="335" height="39.5"/>
                                 <fontDescription key="fontDescription" name="OpenSansLight-Italic" family="Open Sans" pointSize="29"/>
                                 <color key="textColor" red="0.56862745098039214" green="0.5725490196078431" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="coffee-logos.png" translatesAutoresizingMaskIntoConstraints="NO" id="EcJ-Nb-8J6">
-                                <rect key="frame" x="23" y="28" width="328" height="244"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="IMG_0231.png" translatesAutoresizingMaskIntoConstraints="NO" id="TWs-nR-9I6">
+                                <rect key="frame" x="90" y="121" width="195" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,6 +61,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coffee-logos.png" width="580" height="340"/>
+        <image name="IMG_0231.png" width="918" height="633"/>
     </resources>
 </document>

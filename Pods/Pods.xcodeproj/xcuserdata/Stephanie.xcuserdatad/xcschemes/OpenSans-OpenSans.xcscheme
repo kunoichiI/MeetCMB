@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7687DE60A38995FD497552FFB4FB5347'
-               BlueprintName = 'Pods-Meet CMB TeamTests'
+               BlueprintIdentifier = '0D400AC5AB9D42EA4B6B0DFB5CB00340'
+               BlueprintName = 'OpenSans-OpenSans'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-Meet CMB TeamTests.a'>
+               BuildableName = 'OpenSans.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -24,7 +24,7 @@
     UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:membersViewController];
     
     // Set navigation bar title color using the appearance proxy
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:63.0/255.0 green:97.0/255.0 blue:178.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:20.0/255.0 green:101.0/255.0 blue:226.0/255.0 alpha:1.0]];
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
     
     self.window.rootViewController = naviController;

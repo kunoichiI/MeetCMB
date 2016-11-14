@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMBMembersViewController : UICollectionViewController<UICollectionViewDelegate, UICollectionViewDataSource>
-{
-    UICollectionView *_collectionView;
-}
+@interface CMBMembersViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@property(nonatomic, strong) UICollectionView *collectionView;
 
 @end

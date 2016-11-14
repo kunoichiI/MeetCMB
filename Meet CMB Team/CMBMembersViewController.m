@@ -9,7 +9,6 @@
 #import "CMBMembersViewController.h"
 #import "CMBMemberViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "CMBProfileLayout.h"
 
 static NSString * const photoCellIdentifier = @"ProfileCell";
 @interface CMBMembersViewController () <UICollectionViewDelegate>
@@ -30,23 +29,28 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     
     self.title = @"Meet CMB";
     
+    
     NSString *file = [[NSBundle mainBundle] pathForResource:@"team" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:file];
     NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     self.profiles = json;
-    //NSLog(@"%@", self.profiles);
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerClass:[CMBMemberViewCell class] forCellWithReuseIdentifier:photoCellIdentifier];
-    
-    CMBProfileLayout *layout = [[CMBProfileLayout alloc] init];
-    UICollectionView *myCollectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+    NSLog(@"%@", [self.profiles[0] class]);
+
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+
 
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    //NSLog(@"%@", layout);
+    
+    self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:layout];
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    
+    [self.collectionView registerClass:[CMBMemberViewCell class] forCellWithReuseIdentifier:photoCellIdentifier];
+    
+    [self.collectionView setBackgroundColor:[UIColor whiteColor]];
+    
+    [self.view addSubview:self.collectionView];
     // Do any additional setup after loading the view.
 }
 
@@ -67,12 +71,12 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     return [self.profiles count];
 }
 
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CMBMemberViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:photoCellIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    
-    
+    [cell updateCellWithProfile:self.profiles atIndexPath:indexPath];
     return cell;
 }
 
@@ -80,5 +84,22 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+
+#pragma mark <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(206.0, 206.0);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 2.0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 2.0;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 @end

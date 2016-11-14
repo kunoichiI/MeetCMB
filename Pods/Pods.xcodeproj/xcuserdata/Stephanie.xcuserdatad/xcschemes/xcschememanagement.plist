@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>OpenSans-OpenSans.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OpenSans.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Meet CMB Team.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,6 +37,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>097EDC1863F94588A3D597B2B4999D46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0D400AC5AB9D42EA4B6B0DFB5CB00340</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7687DE60A38995FD497552FFB4FB5347</key>
 		<dict>
 			<key>primary</key>
@@ -37,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBAF95B1A8CE922D25AE7C0E2CBA9A7E</key>
+		<key>A50109863C19651F9D35D2073FFB9F65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E496C821C2014E0E94EEFC513C9BFED3</key>
+		<key>B740502B3288EC482709B1F1D5D7152C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

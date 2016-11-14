@@ -15,4 +15,6 @@
 @property(nonatomic, strong) NSString *avatar;
 @property(nonatomic, strong) NSString *number;
 
+- (id) initWithTitle:(NSString *) title firstName:(NSString *)firstName lastName:(NSString *)lastName avatar:(NSString *)avatar number:(NSString *) no_;
+
 @end

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		667B5867E2BB801D0D5DB4D8 /* libPods-Meet CMB Team.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6974E2952E712F19CE56784 /* libPods-Meet CMB Team.a */; };
 		908ACE8A1DD9005C008431F5 /* CMBMemberProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 908ACE891DD9005C008431F5 /* CMBMemberProfile.m */; };
-		908ACE8D1DD908DE008431F5 /* CMBProfileLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 908ACE8C1DD908DE008431F5 /* CMBProfileLayout.m */; };
+		908ACE8F1DD95AB6008431F5 /* IMG_0231.png in Resources */ = {isa = PBXBuildFile; fileRef = 908ACE8E1DD95AB6008431F5 /* IMG_0231.png */; };
 		90C398C71DD6CA6300EFDD6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398C61DD6CA6300EFDD6E /* main.m */; };
 		90C398CA1DD6CA6300EFDD6E /* CMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398C91DD6CA6300EFDD6E /* CMBAppDelegate.m */; };
 		90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C398D11DD6CA6300EFDD6E /* Assets.xcassets */; };
@@ -18,13 +18,9 @@
 		90C398F91DD6CD3900EFDD6E /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 90C398F81DD6CD3900EFDD6E /* team.json */; };
 		90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */; };
 		90C398FE1DD6D0AC00EFDD6E /* CMBMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398FD1DD6D0AC00EFDD6E /* CMBMembersViewController.m */; };
-		90C399001DD6D85700EFDD6E /* coffee-logos.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C398FF1DD6D85700EFDD6E /* coffee-logos.png */; };
 		90C399031DD6DF9D00EFDD6E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399021DD6DF9D00EFDD6E /* DetailViewController.m */; };
 		90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */; };
 		90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C399071DD7DFC500EFDD6E /* placeholder.png */; };
-		90C3990C1DD7E31700EFDD6E /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */; };
-		90C3990D1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */; };
-		90C3990E1DD7E31700EFDD6E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */; };
 		A142BEB45B45CAA6997D5A7D /* libPods-Meet CMB TeamUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */; };
 		D33CE00C5DFC4AFE91E01420 /* libPods-Meet CMB TeamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D985527803798E5F029276A /* libPods-Meet CMB TeamTests.a */; };
 /* End PBXBuildFile section */
@@ -55,8 +51,7 @@
 		8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB TeamUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		908ACE881DD9005C008431F5 /* CMBMemberProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberProfile.h; sourceTree = "<group>"; };
 		908ACE891DD9005C008431F5 /* CMBMemberProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberProfile.m; sourceTree = "<group>"; };
-		908ACE8B1DD908DE008431F5 /* CMBProfileLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBProfileLayout.h; sourceTree = "<group>"; };
-		908ACE8C1DD908DE008431F5 /* CMBProfileLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBProfileLayout.m; sourceTree = "<group>"; };
+		908ACE8E1DD95AB6008431F5 /* IMG_0231.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0231.png; sourceTree = "<group>"; };
 		90C398C21DD6CA6300EFDD6E /* Meet CMB Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet CMB Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C398C61DD6CA6300EFDD6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90C398C81DD6CA6300EFDD6E /* CMBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBAppDelegate.h; sourceTree = "<group>"; };
@@ -73,15 +68,11 @@
 		90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		90C398FC1DD6D0AC00EFDD6E /* CMBMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMembersViewController.h; sourceTree = "<group>"; };
 		90C398FD1DD6D0AC00EFDD6E /* CMBMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMembersViewController.m; sourceTree = "<group>"; };
-		90C398FF1DD6D85700EFDD6E /* coffee-logos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coffee-logos.png"; sourceTree = "<group>"; };
 		90C399011DD6DF9D00EFDD6E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		90C399021DD6DF9D00EFDD6E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		90C399041DD6DFFC00EFDD6E /* CMBMemberViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberViewCell.h; sourceTree = "<group>"; };
 		90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberViewCell.m; sourceTree = "<group>"; };
 		90C399071DD7DFC500EFDD6E /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
-		90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
-		90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
-		90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		C0903F70887586A2A17B0DFE /* Pods-Meet CMB TeamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB TeamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB TeamTests/Pods-Meet CMB TeamTests.release.xcconfig"; sourceTree = "<group>"; };
 		D69E4A8337D55C5797ED6416 /* Pods-Meet CMB Team.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB Team.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB Team/Pods-Meet CMB Team.debug.xcconfig"; sourceTree = "<group>"; };
 		F6974E2952E712F19CE56784 /* libPods-Meet CMB Team.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB Team.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,11 +141,8 @@
 		90C398C41DD6CA6300EFDD6E /* Meet CMB Team */ = {
 			isa = PBXGroup;
 			children = (
-				90C399091DD7E31700EFDD6E /* OpenSans-Light.ttf */,
-				90C3990A1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf */,
-				90C3990B1DD7E31700EFDD6E /* OpenSans-Regular.ttf */,
+				908ACE8E1DD95AB6008431F5 /* IMG_0231.png */,
 				90C399071DD7DFC500EFDD6E /* placeholder.png */,
-				90C398FF1DD6D85700EFDD6E /* coffee-logos.png */,
 				90C398F81DD6CD3900EFDD6E /* team.json */,
 				90C398C81DD6CA6300EFDD6E /* CMBAppDelegate.h */,
 				90C398C91DD6CA6300EFDD6E /* CMBAppDelegate.m */,
@@ -170,8 +158,6 @@
 				90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */,
 				908ACE881DD9005C008431F5 /* CMBMemberProfile.h */,
 				908ACE891DD9005C008431F5 /* CMBMemberProfile.m */,
-				908ACE8B1DD908DE008431F5 /* CMBProfileLayout.h */,
-				908ACE8C1DD908DE008431F5 /* CMBProfileLayout.m */,
 			);
 			path = "Meet CMB Team";
 			sourceTree = "<group>";
@@ -333,13 +319,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C3990C1DD7E31700EFDD6E /* OpenSans-Light.ttf in Resources */,
-				90C399001DD6D85700EFDD6E /* coffee-logos.png in Resources */,
-				90C3990D1DD7E31700EFDD6E /* OpenSans-LightItalic.ttf in Resources */,
+				908ACE8F1DD95AB6008431F5 /* IMG_0231.png in Resources */,
 				90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */,
 				90C398F91DD6CD3900EFDD6E /* team.json in Resources */,
 				90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */,
-				90C3990E1DD7E31700EFDD6E /* OpenSans-Regular.ttf in Resources */,
 				90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,7 +492,6 @@
 				90C398C71DD6CA6300EFDD6E /* main.m in Sources */,
 				90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */,
 				90C399031DD6DF9D00EFDD6E /* DetailViewController.m in Sources */,
-				908ACE8D1DD908DE008431F5 /* CMBProfileLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

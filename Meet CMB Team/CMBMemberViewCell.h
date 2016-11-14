@@ -11,9 +11,11 @@
 
 
 @interface CMBMemberViewCell : UICollectionViewCell
-@property(nonatomic) UILabel *title;
-@property(nonatomic) UILabel *name;
-@property(nonatomic) UIImageView *photo;
+@property(nonatomic) UILabel *labelTitle;
+@property(nonatomic) UILabel *labelName;
+@property(nonatomic) UIImageView *imageViewPhoto;
 
--(id)initWithFrame:(CGRect)frame;
+-(id)initWithCoder:(NSCoder *)aDecoder;
+- (void) updateCellWithProfile: (NSArray *) profiles atIndexPath:(NSIndexPath *) indexPath;
+
 @end
