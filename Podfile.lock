@@ -3,15 +3,18 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SKSplashView (0.1.3)
 
 DEPENDENCIES:
   - OpenSans
   - SDWebImage (~> 3.8)
+  - SKSplashView
 
 SPEC CHECKSUMS:
   OpenSans: 33078846463eae780aa5f82986b51cce085f970d
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SKSplashView: 8148a4893bf2d3dfe28750bc6fd71ae7cb0dda4a
 
-PODFILE CHECKSUM: 44ba717894ecab01f7e835304f60590617426f01
+PODFILE CHECKSUM: 7edfabaca0fee499273dfb7b53e17c449cab0dbf
 
 COCOAPODS: 1.1.1

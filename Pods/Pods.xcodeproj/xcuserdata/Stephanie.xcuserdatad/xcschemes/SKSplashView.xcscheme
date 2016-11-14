@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EF27E4BA2ADBA4A5005B49C105BD0FF6'
-               BlueprintName = 'SDWebImage'
+               BlueprintIdentifier = '6697E188DEF8403B10E6E2B7BAC45E8A'
+               BlueprintName = 'SKSplashView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSDWebImage.a'>
+               BuildableName = 'libSKSplashView.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

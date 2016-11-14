@@ -39,9 +39,10 @@
                                 <color key="textColor" red="0.56862745098039214" green="0.5725490196078431" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="IMG_0231.png" translatesAutoresizingMaskIntoConstraints="NO" id="TWs-nR-9I6">
-                                <rect key="frame" x="90" y="121" width="195" height="107"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="splashImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="smt-CR-mnd">
+                                <rect key="frame" x="16" y="362" width="365" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
+                                <color key="tintColor" red="0.078431372549019607" green="0.396078431372549" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,6 +62,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_0231.png" width="918" height="633"/>
+        <image name="splashImage.png" width="365" height="120"/>
     </resources>
 </document>

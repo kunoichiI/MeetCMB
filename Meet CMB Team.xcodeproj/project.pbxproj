@@ -11,6 +11,8 @@
 		906053A51DD9675E009CDADB /* Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 906053A41DD9675E009CDADB /* Sound.mp3 */; };
 		908ACE8A1DD9005C008431F5 /* CMBMemberProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 908ACE891DD9005C008431F5 /* CMBMemberProfile.m */; };
 		908ACE9D1DD964B9008431F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908ACE9C1DD964B9008431F5 /* AVFoundation.framework */; };
+		90C395121DDA39F800689C63 /* CustomPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C395111DDA39F800689C63 /* CustomPresentTransition.m */; };
+		90C395141DDA424000689C63 /* splashImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C395131DDA424000689C63 /* splashImage.png */; };
 		90C398C71DD6CA6300EFDD6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398C61DD6CA6300EFDD6E /* main.m */; };
 		90C398CA1DD6CA6300EFDD6E /* CMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398C91DD6CA6300EFDD6E /* CMBAppDelegate.m */; };
 		90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C398D11DD6CA6300EFDD6E /* Assets.xcassets */; };
@@ -56,6 +58,9 @@
 		908ACE881DD9005C008431F5 /* CMBMemberProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberProfile.h; sourceTree = "<group>"; };
 		908ACE891DD9005C008431F5 /* CMBMemberProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberProfile.m; sourceTree = "<group>"; };
 		908ACE9C1DD964B9008431F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		90C395101DDA39F800689C63 /* CustomPresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPresentTransition.h; sourceTree = "<group>"; };
+		90C395111DDA39F800689C63 /* CustomPresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPresentTransition.m; sourceTree = "<group>"; };
+		90C395131DDA424000689C63 /* splashImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashImage.png; sourceTree = "<group>"; };
 		90C398C21DD6CA6300EFDD6E /* Meet CMB Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet CMB Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C398C61DD6CA6300EFDD6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90C398C81DD6CA6300EFDD6E /* CMBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBAppDelegate.h; sourceTree = "<group>"; };
@@ -150,8 +155,9 @@
 		90C398C41DD6CA6300EFDD6E /* Meet CMB Team */ = {
 			isa = PBXGroup;
 			children = (
-				90FDA0D61DD98979001CBB2A /* CMB.png */,
+				90C395131DDA424000689C63 /* splashImage.png */,
 				906053A41DD9675E009CDADB /* Sound.mp3 */,
+				90FDA0D61DD98979001CBB2A /* CMB.png */,
 				90C399071DD7DFC500EFDD6E /* placeholder.png */,
 				90C398F81DD6CD3900EFDD6E /* team.json */,
 				90C398C81DD6CA6300EFDD6E /* CMBAppDelegate.h */,
@@ -170,6 +176,8 @@
 				908ACE891DD9005C008431F5 /* CMBMemberProfile.m */,
 				90FDA0D81DD990B8001CBB2A /* CMBSearchResultsController.h */,
 				90FDA0D91DD990B8001CBB2A /* CMBSearchResultsController.m */,
+				90C395101DDA39F800689C63 /* CustomPresentTransition.h */,
+				90C395111DDA39F800689C63 /* CustomPresentTransition.m */,
 			);
 			path = "Meet CMB Team";
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C395141DDA424000689C63 /* splashImage.png in Resources */,
 				90FDA0D71DD98979001CBB2A /* CMB.png in Resources */,
 				90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */,
 				906053A51DD9675E009CDADB /* Sound.mp3 in Resources */,
@@ -502,6 +511,7 @@
 				908ACE8A1DD9005C008431F5 /* CMBMemberProfile.m in Sources */,
 				90C398FE1DD6D0AC00EFDD6E /* CMBMembersViewController.m in Sources */,
 				90C398CA1DD6CA6300EFDD6E /* CMBAppDelegate.m in Sources */,
+				90C395121DDA39F800689C63 /* CustomPresentTransition.m in Sources */,
 				90C398C71DD6CA6300EFDD6E /* main.m in Sources */,
 				90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */,
 				90C399031DD6DF9D00EFDD6E /* CMBDetailViewController.m in Sources */,

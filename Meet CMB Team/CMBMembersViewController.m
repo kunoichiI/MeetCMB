@@ -13,10 +13,10 @@
 #import "CMBSearchResultsController.h"
 #import "CMBMemberProfile.h"
 #import "CMBDetailViewController.h"
-
 static NSString * const photoCellIdentifier = @"ProfileCell";
 @interface CMBMembersViewController () <UICollectionViewDelegate>
 @property(nonatomic) AVAudioPlayer *player;
+@property (strong, nonatomic) UIActivityIndicatorView *indicatorView;
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSMutableArray *searchResults;
 @property (nonatomic, strong) CMBSearchResultsController *resultsCollectionController;
@@ -30,6 +30,8 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // navigation picture(CMB logo)
     UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 32)];
     iv.image = [UIImage imageNamed:@"CMB"];
     iv.contentMode = UIViewContentModeScaleAspectFit;
@@ -43,7 +45,7 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     self.resultsCollectionController.collectionView.delegate = self;
     self.searchController.searchResultsUpdater = self;
     self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
-    self.searchController.searchBar.placeholder = @"Search people here";
+    self.searchController.searchBar.placeholder = @"Search us here";
     self.searchController.searchBar.delegate = self;
     self.searchController.dimsBackgroundDuringPresentation = YES;
     self.definesPresentationContext = YES; // know where UISearchController to be displayed
@@ -64,6 +66,8 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     [self.view addSubview:self.collectionView];
     // Do any additional setup after loading the view.
 }
+
+
 
 #pragma mark - UISearchControllerDelegate
 
@@ -149,7 +153,6 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     NSDictionary *selectedProfile = (collectionView == self.collectionView)? self.profiles[indexPath.row] :self.resultsCollectionController.filteredProfiles[indexPath.row];
     CMBDetailViewController *detailViewController = [[CMBDetailViewController alloc]init];
     detailViewController.profile = [[CMBMemberProfile alloc] initWithTitle:selectedProfile[@"title"] firstName:selectedProfile[@"firstName"] lastName:selectedProfile[@"lastName"] avatar:selectedProfile[@"avatar"] bio:selectedProfile[@"bio"]];
-    //NSLog(@"%@", [detailViewController.profile class]);
     
     [self.navigationController pushViewController:detailViewController animated:YES];
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
@@ -179,21 +182,21 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     return UIEdgeInsetsMake(44.0, 0, 0, 0);
 }
 
-#pragma mark - <<#pragma mark - UISearchResultsUpdating>
+#pragma mark - <UISearchResultsUpdating>
 
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     // set searchString equal to what's typed into the searchbar
     NSString *searchString = searchController.searchBar.text;
     [self updateFilteredContentForMemberProfile:searchString];
     
-    // If searchResultsController
-    if (self.searchController.searchResultsController) {
-            CMBSearchResultsController *collectionviewController = (CMBSearchResultsController *)self.searchController.searchResultsController;
-        NSLog(@"%@", collectionviewController);
-            collectionviewController.filteredProfiles = self.searchResults;
-            NSLog(@"%@", self.searchResults);
-            [collectionviewController.collectionView reloadData];
-        }
+    
+    CMBSearchResultsController *vc = (CMBSearchResultsController *)self.searchController.searchResultsController;
+    
+    vc.filteredProfiles = [self.searchResults copy];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    NSLog(@"%@", self.searchResults);
+    [vc.collectionView reloadData];
+    [self presentViewController:nav animated:YES completion:nil];
     
 }
 
