@@ -9,12 +9,11 @@
 #import "CMBMembersViewController.h"
 #import "CMBMemberViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <AVFoundation/AVFoundation.h>
 
 static NSString * const photoCellIdentifier = @"ProfileCell";
 @interface CMBMembersViewController () <UICollectionViewDelegate>
-
-
-
+@property(nonatomic, strong) AVAudioPlayer *player;
 
 @end
 
@@ -24,20 +23,10 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
     self.title = @"Meet CMB";
     
-    
-    
-    NSLog(@"%@", [self.profiles[0] class]);
 
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-
-
-    
-    //NSLog(@"%@", layout);
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:layout];
     self.collectionView.delegate = self;
@@ -80,7 +69,21 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+    NSString *path = [NSString stringWithFormat:@"%@/sound.mp3", resourcePath];
     
+    NSURL *url = [NSURL fileURLWithPath:path];
+    NSError *error;
+    
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    self.player.numberOfLoops = 0;
+    self.player.delegate = self;
+    [self.player play];
+}
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    NSLog(@"%d",flag);
 }
 
 #pragma mark <UICollectionViewDelegateFlowLayout>

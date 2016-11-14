@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		667B5867E2BB801D0D5DB4D8 /* libPods-Meet CMB Team.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6974E2952E712F19CE56784 /* libPods-Meet CMB Team.a */; };
+		906053A51DD9675E009CDADB /* Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 906053A41DD9675E009CDADB /* Sound.mp3 */; };
 		908ACE8A1DD9005C008431F5 /* CMBMemberProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 908ACE891DD9005C008431F5 /* CMBMemberProfile.m */; };
 		908ACE8F1DD95AB6008431F5 /* IMG_0231.png in Resources */ = {isa = PBXBuildFile; fileRef = 908ACE8E1DD95AB6008431F5 /* IMG_0231.png */; };
+		908ACE9D1DD964B9008431F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908ACE9C1DD964B9008431F5 /* AVFoundation.framework */; };
 		90C398C71DD6CA6300EFDD6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398C61DD6CA6300EFDD6E /* main.m */; };
 		90C398CA1DD6CA6300EFDD6E /* CMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398C91DD6CA6300EFDD6E /* CMBAppDelegate.m */; };
 		90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C398D11DD6CA6300EFDD6E /* Assets.xcassets */; };
@@ -49,9 +51,11 @@
 		7D985527803798E5F029276A /* libPods-Meet CMB TeamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB TeamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E19624A0BAF709282AACC9 /* Pods-Meet CMB Team.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB Team.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB Team/Pods-Meet CMB Team.release.xcconfig"; sourceTree = "<group>"; };
 		8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB TeamUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		906053A41DD9675E009CDADB /* Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sound.mp3; path = ../../../../Downloads/Sound.mp3; sourceTree = "<group>"; };
 		908ACE881DD9005C008431F5 /* CMBMemberProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberProfile.h; sourceTree = "<group>"; };
 		908ACE891DD9005C008431F5 /* CMBMemberProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberProfile.m; sourceTree = "<group>"; };
 		908ACE8E1DD95AB6008431F5 /* IMG_0231.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0231.png; sourceTree = "<group>"; };
+		908ACE9C1DD964B9008431F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		90C398C21DD6CA6300EFDD6E /* Meet CMB Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet CMB Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C398C61DD6CA6300EFDD6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90C398C81DD6CA6300EFDD6E /* CMBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBAppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908ACE9D1DD964B9008431F5 /* AVFoundation.framework in Frameworks */,
 				667B5867E2BB801D0D5DB4D8 /* libPods-Meet CMB Team.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +114,7 @@
 		77853968480AFD0AD6F825E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				908ACE9C1DD964B9008431F5 /* AVFoundation.framework */,
 				F6974E2952E712F19CE56784 /* libPods-Meet CMB Team.a */,
 				7D985527803798E5F029276A /* libPods-Meet CMB TeamTests.a */,
 				8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */,
@@ -141,6 +147,7 @@
 		90C398C41DD6CA6300EFDD6E /* Meet CMB Team */ = {
 			isa = PBXGroup;
 			children = (
+				906053A41DD9675E009CDADB /* Sound.mp3 */,
 				908ACE8E1DD95AB6008431F5 /* IMG_0231.png */,
 				90C399071DD7DFC500EFDD6E /* placeholder.png */,
 				90C398F81DD6CD3900EFDD6E /* team.json */,
@@ -321,6 +328,7 @@
 			files = (
 				908ACE8F1DD95AB6008431F5 /* IMG_0231.png in Resources */,
 				90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */,
+				906053A51DD9675E009CDADB /* Sound.mp3 in Resources */,
 				90C398F91DD6CD3900EFDD6E /* team.json in Resources */,
 				90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */,
 				90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */,
