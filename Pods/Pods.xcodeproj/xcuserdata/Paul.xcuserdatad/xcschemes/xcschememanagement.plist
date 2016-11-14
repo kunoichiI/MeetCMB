@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>OpenSans-OpenSans.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>OpenSans.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-Meet CMB Team.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-Meet CMB TeamTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-Meet CMB TeamUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>SKSplashView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>088423F52C3646DD88AA293E03D5F32F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0D400AC5AB9D42EA4B6B0DFB5CB00340</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6697E188DEF8403B10E6E2B7BAC45E8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7687DE60A38995FD497552FFB4FB5347</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>939EF0CA99195DD222AAA9F243B72F20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B740502B3288EC482709B1F1D5D7152C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF27E4BA2ADBA4A5005B49C105BD0FF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

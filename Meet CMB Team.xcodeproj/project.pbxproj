@@ -8,26 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		667B5867E2BB801D0D5DB4D8 /* libPods-Meet CMB Team.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6974E2952E712F19CE56784 /* libPods-Meet CMB Team.a */; };
-		906053A51DD9675E009CDADB /* Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 906053A41DD9675E009CDADB /* Sound.mp3 */; };
-		908ACE8A1DD9005C008431F5 /* CMBMemberProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 908ACE891DD9005C008431F5 /* CMBMemberProfile.m */; };
 		908ACE9D1DD964B9008431F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908ACE9C1DD964B9008431F5 /* AVFoundation.framework */; };
-		90C395121DDA39F800689C63 /* CustomPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C395111DDA39F800689C63 /* CustomPresentTransition.m */; };
-		90C395141DDA424000689C63 /* splashImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C395131DDA424000689C63 /* splashImage.png */; };
 		90C398C71DD6CA6300EFDD6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398C61DD6CA6300EFDD6E /* main.m */; };
 		90C398CA1DD6CA6300EFDD6E /* CMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398C91DD6CA6300EFDD6E /* CMBAppDelegate.m */; };
 		90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C398D11DD6CA6300EFDD6E /* Assets.xcassets */; };
 		90C398E01DD6CA6300EFDD6E /* Meet_CMB_TeamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398DF1DD6CA6300EFDD6E /* Meet_CMB_TeamTests.m */; };
 		90C398EB1DD6CA6300EFDD6E /* Meet_CMB_TeamUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398EA1DD6CA6300EFDD6E /* Meet_CMB_TeamUITests.m */; };
 		90C398F91DD6CD3900EFDD6E /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 90C398F81DD6CD3900EFDD6E /* team.json */; };
-		90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */; };
-		90C398FE1DD6D0AC00EFDD6E /* CMBMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C398FD1DD6D0AC00EFDD6E /* CMBMembersViewController.m */; };
-		90C399031DD6DF9D00EFDD6E /* CMBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399021DD6DF9D00EFDD6E /* CMBDetailViewController.m */; };
-		90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */; };
-		90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C399071DD7DFC500EFDD6E /* placeholder.png */; };
-		90FDA0D71DD98979001CBB2A /* CMB.png in Resources */ = {isa = PBXBuildFile; fileRef = 90FDA0D61DD98979001CBB2A /* CMB.png */; };
-		90FDA0DA1DD990B8001CBB2A /* CMBSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FDA0D91DD990B8001CBB2A /* CMBSearchResultsController.m */; };
 		A142BEB45B45CAA6997D5A7D /* libPods-Meet CMB TeamUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */; };
 		D33CE00C5DFC4AFE91E01420 /* libPods-Meet CMB TeamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D985527803798E5F029276A /* libPods-Meet CMB TeamTests.a */; };
+		DA1948621DDA63DB0082E754 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA1948611DDA63DB0082E754 /* sound.mp3 */; };
+		DA1948791DDA649C0082E754 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948651DDA649C0082E754 /* UIView+Utilities.m */; };
+		DA19487A1DDA649C0082E754 /* CMBMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948681DDA649C0082E754 /* CMBMemberCell.m */; };
+		DA19487B1DDA649C0082E754 /* CMBAudioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DA19486B1DDA649C0082E754 /* CMBAudioHelper.m */; };
+		DA19487C1DDA649C0082E754 /* CMBMemberProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA19486E1DDA649C0082E754 /* CMBMemberProfile.m */; };
+		DA19487D1DDA649C0082E754 /* CMBService.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948711DDA649C0082E754 /* CMBService.m */; };
+		DA19487E1DDA649C0082E754 /* CMBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948741DDA649C0082E754 /* CMBDetailViewController.m */; };
+		DA19487F1DDA649C0082E754 /* CMBMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948761DDA649C0082E754 /* CMBMembersViewController.m */; };
+		DA1948801DDA649C0082E754 /* CMBSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1948781DDA649C0082E754 /* CMBSearchResultsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +52,7 @@
 		7D985527803798E5F029276A /* libPods-Meet CMB TeamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB TeamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E19624A0BAF709282AACC9 /* Pods-Meet CMB Team.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB Team.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB Team/Pods-Meet CMB Team.release.xcconfig"; sourceTree = "<group>"; };
 		8D8DB0FEAE1A4401D1C2B225 /* libPods-Meet CMB TeamUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB TeamUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		906053A41DD9675E009CDADB /* Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sound.mp3; path = ../Sound.mp3; sourceTree = "<group>"; };
-		908ACE881DD9005C008431F5 /* CMBMemberProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberProfile.h; sourceTree = "<group>"; };
-		908ACE891DD9005C008431F5 /* CMBMemberProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberProfile.m; sourceTree = "<group>"; };
 		908ACE9C1DD964B9008431F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		90C395101DDA39F800689C63 /* CustomPresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPresentTransition.h; sourceTree = "<group>"; };
-		90C395111DDA39F800689C63 /* CustomPresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPresentTransition.m; sourceTree = "<group>"; };
-		90C395131DDA424000689C63 /* splashImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashImage.png; sourceTree = "<group>"; };
 		90C398C21DD6CA6300EFDD6E /* Meet CMB Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet CMB Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C398C61DD6CA6300EFDD6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90C398C81DD6CA6300EFDD6E /* CMBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBAppDelegate.h; sourceTree = "<group>"; };
@@ -74,19 +66,26 @@
 		90C398EA1DD6CA6300EFDD6E /* Meet_CMB_TeamUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Meet_CMB_TeamUITests.m; sourceTree = "<group>"; };
 		90C398EC1DD6CA6300EFDD6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C398F81DD6CD3900EFDD6E /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = team.json; sourceTree = "<group>"; };
-		90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		90C398FC1DD6D0AC00EFDD6E /* CMBMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMembersViewController.h; sourceTree = "<group>"; };
-		90C398FD1DD6D0AC00EFDD6E /* CMBMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMembersViewController.m; sourceTree = "<group>"; };
-		90C399011DD6DF9D00EFDD6E /* CMBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBDetailViewController.h; sourceTree = "<group>"; };
-		90C399021DD6DF9D00EFDD6E /* CMBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBDetailViewController.m; sourceTree = "<group>"; };
-		90C399041DD6DFFC00EFDD6E /* CMBMemberViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberViewCell.h; sourceTree = "<group>"; };
-		90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberViewCell.m; sourceTree = "<group>"; };
-		90C399071DD7DFC500EFDD6E /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
-		90FDA0D61DD98979001CBB2A /* CMB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CMB.png; sourceTree = "<group>"; };
-		90FDA0D81DD990B8001CBB2A /* CMBSearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBSearchResultsController.h; sourceTree = "<group>"; };
-		90FDA0D91DD990B8001CBB2A /* CMBSearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSearchResultsController.m; sourceTree = "<group>"; };
 		C0903F70887586A2A17B0DFE /* Pods-Meet CMB TeamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB TeamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB TeamTests/Pods-Meet CMB TeamTests.release.xcconfig"; sourceTree = "<group>"; };
 		D69E4A8337D55C5797ED6416 /* Pods-Meet CMB Team.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet CMB Team.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meet CMB Team/Pods-Meet CMB Team.debug.xcconfig"; sourceTree = "<group>"; };
+		DA1948571DDA4CCE0082E754 /* CMB-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMB-Prefix.pch"; sourceTree = "<group>"; };
+		DA1948611DDA63DB0082E754 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		DA1948641DDA649C0082E754 /* UIView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utilities.h"; sourceTree = "<group>"; };
+		DA1948651DDA649C0082E754 /* UIView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utilities.m"; sourceTree = "<group>"; };
+		DA1948671DDA649C0082E754 /* CMBMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberCell.h; sourceTree = "<group>"; };
+		DA1948681DDA649C0082E754 /* CMBMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberCell.m; sourceTree = "<group>"; };
+		DA19486A1DDA649C0082E754 /* CMBAudioHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBAudioHelper.h; sourceTree = "<group>"; };
+		DA19486B1DDA649C0082E754 /* CMBAudioHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBAudioHelper.m; sourceTree = "<group>"; };
+		DA19486D1DDA649C0082E754 /* CMBMemberProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMemberProfile.h; sourceTree = "<group>"; };
+		DA19486E1DDA649C0082E754 /* CMBMemberProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMemberProfile.m; sourceTree = "<group>"; };
+		DA1948701DDA649C0082E754 /* CMBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBService.h; sourceTree = "<group>"; };
+		DA1948711DDA649C0082E754 /* CMBService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBService.m; sourceTree = "<group>"; };
+		DA1948731DDA649C0082E754 /* CMBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBDetailViewController.h; sourceTree = "<group>"; };
+		DA1948741DDA649C0082E754 /* CMBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBDetailViewController.m; sourceTree = "<group>"; };
+		DA1948751DDA649C0082E754 /* CMBMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBMembersViewController.h; sourceTree = "<group>"; };
+		DA1948761DDA649C0082E754 /* CMBMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBMembersViewController.m; sourceTree = "<group>"; };
+		DA1948771DDA649C0082E754 /* CMBSearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBSearchResultsController.h; sourceTree = "<group>"; };
+		DA1948781DDA649C0082E754 /* CMBSearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSearchResultsController.m; sourceTree = "<group>"; };
 		F6974E2952E712F19CE56784 /* libPods-Meet CMB Team.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meet CMB Team.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,29 +154,17 @@
 		90C398C41DD6CA6300EFDD6E /* Meet CMB Team */ = {
 			isa = PBXGroup;
 			children = (
-				90C395131DDA424000689C63 /* splashImage.png */,
-				906053A41DD9675E009CDADB /* Sound.mp3 */,
-				90FDA0D61DD98979001CBB2A /* CMB.png */,
-				90C399071DD7DFC500EFDD6E /* placeholder.png */,
-				90C398F81DD6CD3900EFDD6E /* team.json */,
+				DA1948631DDA649C0082E754 /* Categories */,
+				DA1948661DDA649C0082E754 /* Cells */,
+				DA1948691DDA649C0082E754 /* Helpers */,
+				DA19486C1DDA649C0082E754 /* Models */,
+				DA19486F1DDA649C0082E754 /* Service */,
+				DA1948721DDA649C0082E754 /* ViewControllers */,
 				90C398C81DD6CA6300EFDD6E /* CMBAppDelegate.h */,
 				90C398C91DD6CA6300EFDD6E /* CMBAppDelegate.m */,
-				90C398D11DD6CA6300EFDD6E /* Assets.xcassets */,
 				90C398D61DD6CA6300EFDD6E /* Info.plist */,
+				90C398D11DD6CA6300EFDD6E /* Assets.xcassets */,
 				90C398C51DD6CA6300EFDD6E /* Supporting Files */,
-				90C398FA1DD6CFFD00EFDD6E /* Launch Screen.storyboard */,
-				90C398FC1DD6D0AC00EFDD6E /* CMBMembersViewController.h */,
-				90C398FD1DD6D0AC00EFDD6E /* CMBMembersViewController.m */,
-				90C399011DD6DF9D00EFDD6E /* CMBDetailViewController.h */,
-				90C399021DD6DF9D00EFDD6E /* CMBDetailViewController.m */,
-				90C399041DD6DFFC00EFDD6E /* CMBMemberViewCell.h */,
-				90C399051DD6DFFC00EFDD6E /* CMBMemberViewCell.m */,
-				908ACE881DD9005C008431F5 /* CMBMemberProfile.h */,
-				908ACE891DD9005C008431F5 /* CMBMemberProfile.m */,
-				90FDA0D81DD990B8001CBB2A /* CMBSearchResultsController.h */,
-				90FDA0D91DD990B8001CBB2A /* CMBSearchResultsController.m */,
-				90C395101DDA39F800689C63 /* CustomPresentTransition.h */,
-				90C395111DDA39F800689C63 /* CustomPresentTransition.m */,
 			);
 			path = "Meet CMB Team";
 			sourceTree = "<group>";
@@ -185,6 +172,9 @@
 		90C398C51DD6CA6300EFDD6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA1948571DDA4CCE0082E754 /* CMB-Prefix.pch */,
+				DA1948611DDA63DB0082E754 /* sound.mp3 */,
+				90C398F81DD6CD3900EFDD6E /* team.json */,
 				90C398C61DD6CA6300EFDD6E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -219,6 +209,64 @@
 				01E5C31C4AC139C39E298622 /* Pods-Meet CMB TeamUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA1948631DDA649C0082E754 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DA1948641DDA649C0082E754 /* UIView+Utilities.h */,
+				DA1948651DDA649C0082E754 /* UIView+Utilities.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		DA1948661DDA649C0082E754 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA1948671DDA649C0082E754 /* CMBMemberCell.h */,
+				DA1948681DDA649C0082E754 /* CMBMemberCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DA1948691DDA649C0082E754 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DA19486A1DDA649C0082E754 /* CMBAudioHelper.h */,
+				DA19486B1DDA649C0082E754 /* CMBAudioHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DA19486C1DDA649C0082E754 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA19486D1DDA649C0082E754 /* CMBMemberProfile.h */,
+				DA19486E1DDA649C0082E754 /* CMBMemberProfile.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA19486F1DDA649C0082E754 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DA1948701DDA649C0082E754 /* CMBService.h */,
+				DA1948711DDA649C0082E754 /* CMBService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DA1948721DDA649C0082E754 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA1948751DDA649C0082E754 /* CMBMembersViewController.h */,
+				DA1948761DDA649C0082E754 /* CMBMembersViewController.m */,
+				DA1948771DDA649C0082E754 /* CMBSearchResultsController.h */,
+				DA1948781DDA649C0082E754 /* CMBSearchResultsController.m */,
+				DA1948731DDA649C0082E754 /* CMBDetailViewController.h */,
+				DA1948741DDA649C0082E754 /* CMBDetailViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +345,7 @@
 				TargetAttributes = {
 					90C398C11DD6CA6300EFDD6E = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = VEUGRV3R3C;
+						DevelopmentTeam = T4P333LCQ7;
 						ProvisioningStyle = Automatic;
 					};
 					90C398DA1DD6CA6300EFDD6E = {
@@ -339,13 +387,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C395141DDA424000689C63 /* splashImage.png in Resources */,
-				90FDA0D71DD98979001CBB2A /* CMB.png in Resources */,
-				90C398FB1DD6CFFD00EFDD6E /* Launch Screen.storyboard in Resources */,
-				906053A51DD9675E009CDADB /* Sound.mp3 in Resources */,
 				90C398F91DD6CD3900EFDD6E /* team.json in Resources */,
-				90C399081DD7DFC500EFDD6E /* placeholder.png in Resources */,
 				90C398D21DD6CA6300EFDD6E /* Assets.xcassets in Resources */,
+				DA1948621DDA63DB0082E754 /* sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,14 +552,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				908ACE8A1DD9005C008431F5 /* CMBMemberProfile.m in Sources */,
-				90C398FE1DD6D0AC00EFDD6E /* CMBMembersViewController.m in Sources */,
+				DA19487E1DDA649C0082E754 /* CMBDetailViewController.m in Sources */,
+				DA19487F1DDA649C0082E754 /* CMBMembersViewController.m in Sources */,
+				DA19487D1DDA649C0082E754 /* CMBService.m in Sources */,
+				DA19487C1DDA649C0082E754 /* CMBMemberProfile.m in Sources */,
 				90C398CA1DD6CA6300EFDD6E /* CMBAppDelegate.m in Sources */,
-				90C395121DDA39F800689C63 /* CustomPresentTransition.m in Sources */,
+				DA1948791DDA649C0082E754 /* UIView+Utilities.m in Sources */,
 				90C398C71DD6CA6300EFDD6E /* main.m in Sources */,
-				90C399061DD6DFFC00EFDD6E /* CMBMemberViewCell.m in Sources */,
-				90C399031DD6DF9D00EFDD6E /* CMBDetailViewController.m in Sources */,
-				90FDA0DA1DD990B8001CBB2A /* CMBSearchResultsController.m in Sources */,
+				DA1948801DDA649C0082E754 /* CMBSearchResultsController.m in Sources */,
+				DA19487B1DDA649C0082E754 /* CMBAudioHelper.m in Sources */,
+				DA19487A1DDA649C0082E754 /* CMBMemberCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,7 +693,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = VEUGRV3R3C;
+				DEVELOPMENT_TEAM = T4P333LCQ7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Meet CMB Team/CMB-Prefix.pch";
 				INFOPLIST_FILE = "Meet CMB Team/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -662,7 +710,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = VEUGRV3R3C;
+				DEVELOPMENT_TEAM = T4P333LCQ7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Meet CMB Team/CMB-Prefix.pch";
 				INFOPLIST_FILE = "Meet CMB Team/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

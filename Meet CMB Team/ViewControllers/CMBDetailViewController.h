@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CMBDetailViewController.h
 //  Meet CMB Team
 //
 //  Created by Mingyuan Wang on 11/11/16.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMBAppDelegate : UIResponder <UIApplicationDelegate>
+@interface CMBDetailViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) CMBMemberProfile *profile;
 
 @end
-
