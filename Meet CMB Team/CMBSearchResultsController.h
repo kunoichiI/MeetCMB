@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CMBSearchResultsController : UIViewController
+@property(nonatomic, strong) NSArray *filteredProfiles;
+@property(nonatomic, strong) UICollectionView *collectionView;
 
 @end

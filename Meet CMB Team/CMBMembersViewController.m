@@ -11,12 +11,14 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AVFoundation/AVFoundation.h>
 #import "CMBSearchResultsController.h"
+#import "CMBMemberProfile.h"
 
 static NSString * const photoCellIdentifier = @"ProfileCell";
 @interface CMBMembersViewController () <UICollectionViewDelegate>
 @property(nonatomic) AVAudioPlayer *player;
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSMutableArray *searchResults;
+@property (nonatomic, strong) CMBSearchResultsController *resultsCollectionController;
 
 @end
 
@@ -31,11 +33,10 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     iv.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = iv;
     
-    CMBSearchResultsController *resultsController = [[CMBSearchResultsController alloc]init];
-    UINavigationController *searchResultsController = [[UINavigationController alloc] initWithRootViewController:resultsController];
+    _resultsCollectionController = [[CMBSearchResultsController alloc] init];
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:self.resultsCollectionController];
+    [self.searchController.searchBar sizeToFit];
     
-    // This instance of UISearchController will use searchResults
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
     self.searchController.searchResultsUpdater = self;
     self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
     self.searchController.searchBar.placeholder = @"Search people here";
@@ -126,11 +127,61 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     // set searchString equal to what's typed into the searchbar
     NSString *searchString = self.searchController.searchBar.text;
+    NSMutableArray *searchResults = [self.profiles mutableCopy];
     
+    // strip out all the leading and trailing spaces
+    NSString *strippedString = [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    // break up the search terms (separated by spaces)
+    NSArray *searchItems = nil;
+    if (strippedString.length > 0) {
+        searchItems = [strippedString componentsSeparatedByString:@" "];
+    }
+    
+    // build all the "AND" expressions for each value in the searchString
+    NSMutableArray *andMatchPredicates= [NSMutableArray array];
+    
+    for (NSString *searchString in searchItems) {
+        // each searchString creates an OR predicate for: name, title
+        NSMutableArray *searchItemsPredicate = [NSMutableArray array];
+        // Use NSExpression represent expressions in our predicates
+        // NSPredicate is made up of samaller, atomic parts: two NSExpressions( a left-hand value and a right-hand value)
+        
+        // name field matching
+        NSExpression *lhs = [NSExpression expressionForKeyPath:@"title"];
+        NSExpression *rhs = [NSExpression expressionForConstantValue:searchString];
+        NSPredicate *finalPredicate = [NSComparisonPredicate predicateWithLeftExpression:lhs rightExpression:rhs modifier:NSDirectPredicateModifier type:NSEqualToPredicateOperatorType options:NSCaseInsensitivePredicateOption];
+        [searchItemsPredicate addObject:finalPredicate];
+        
+        NSCompoundPredicate *orMatchPredicates = [NSCompoundPredicate orPredicateWithSubpredicates:searchItemsPredicate];
+        [andMatchPredicates addObject:orMatchPredicates];
+    }
+    
+    NSCompoundPredicate *finalCompoundPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:andMatchPredicates];
+    searchResults = [[searchResults filteredArrayUsingPredicate:finalCompoundPredicate]mutableCopy];
+    
+    // hand over the filtered results to out search results collectionview
+    CMBSearchResultsController *collectionviewController = (CMBSearchResultsController *)self.searchController.searchResultsController;
+    collectionviewController.filteredProfiles = searchResults;
+    NSLog(@"%@", searchResults);
+    [collectionviewController.collectionView reloadData];
     
 }
     
 - (void) updateFilteredContentForNameOrTitle:(NSString *)title name:(NSString *)name {
-         
+    if (title == nil && name == nil) { // if no input is detected
+        self.searchResults = [self.profiles mutableCopy];
+    } else if (title != nil) {
+        NSMutableArray *searchResults = [[NSMutableArray alloc] init];
+        for (NSDictionary *profile in self.profiles) {
+            if ([profile[@"title"] containsString:title]) {
+                CMBMemberProfile *member = [[CMBMemberProfile alloc]initWithTitle:profile[@"title"] firstName:profile[@"firstName"] lastName:profile[@"lastName"] avatar:profile[@"avatar"] number:profile[@"number"]];
+                [searchResults addObject:member];
+            }
+            self.searchResults = searchResults;
+        
+        }
+    }
 }
+
 @end
