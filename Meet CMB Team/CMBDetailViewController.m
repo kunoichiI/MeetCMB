@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UILabel *labelMyBio;
 @property (nonatomic, strong) UILabel *labelBio;
+@property (nonatomic, strong) UIImageView *imageViewPhoto;
 
 @end
 
@@ -21,10 +22,10 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Hello";
+    self.title = [NSString stringWithFormat:@"%@%@%@", self.profile.firstName, @"  ", self.profile.lastName];
     
     
-    NSLog(@"%@", self.profile.bio);
+    //NSLog(@"%@", self.profile.bio);
     self.labelBio = [[UILabel alloc] initWithFrame:CGRectMake(44, 50, 100, 75)];
     self.labelBio.backgroundColor = [UIColor blackColor];
     self.labelBio.text = @"My Story";
@@ -36,7 +37,7 @@
     self.labelMyBio.text = self.profile.bio;
     self.labelMyBio.font = [UIFont fontWithName:@"Arial" size:10];
     [self.labelMyBio sizeToFit];
-    self.labelMyBio.lineBreakMode = UILineBreakModeWordWrap;
+    self.labelMyBio.lineBreakMode = NSLineBreakByWordWrapping;
     self.labelMyBio.numberOfLines = 0;
     
     [self.view addSubview:self.labelBio];
@@ -48,5 +49,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - UIStateRestoration
+
+NSString *const ViewControllerProductKey = @"ViewControllerProductKey";
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super encodeRestorableStateWithCoder:coder];
+    
+    // encode the product
+    [coder encodeObject:self.profile forKey:ViewControllerProductKey];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super decodeRestorableStateWithCoder:coder];
+    
+    // restore the product
+    self.profile = [coder decodeObjectForKey:ViewControllerProductKey];
+}
 
 @end

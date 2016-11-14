@@ -82,12 +82,45 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     }
 }
 
+
+#pragma mark - UISearchControllerDelegate
+
+// Called after the search controller's search bar has agreed to begin editing or when
+// 'active' is set to YES.
+// If you choose not to present the controller yourself or do not implement this method,
+// a default presentation is performed on your behalf.
+//
+// Implement this method if the default presentation is not adequate for your purposes.
+//
+- (void)presentSearchController:(UISearchController *)searchController {
+    
+}
+
+- (void)willPresentSearchController:(UISearchController *)searchController {
+    // do something before the search controller is presented
+}
+
+- (void)didPresentSearchController:(UISearchController *)searchController {
+    // do something after the search controller is presented
+}
+
+- (void)willDismissSearchController:(UISearchController *)searchController {
+    // do something before the search controller is dismissed
+}
+
+- (void)didDismissSearchController:(UISearchController *)searchController {
+    // do something after the search controller is dismissed
+}
+
+
 #pragma mark - <UISearchBarDelegate>
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
 }
 
 #pragma mark - <MemoryWarningInfo>
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -129,10 +162,12 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     self.player.delegate = self;
     [self.player play];
     
+    // we are the collection view delegate for both our main collection view and filtered collection,
+    // so we can push from the current navigation controller(resultsCollectionController's parent view controller is not this UINavigationController)
     NSDictionary *selectedProfile = (collectionView == self.collectionView)? self.profiles[indexPath.row] :self.resultsCollectionController.filteredProfiles[indexPath.row];
     CMBDetailViewController *detailViewController = [[CMBDetailViewController alloc]init];
     detailViewController.profile = [[CMBMemberProfile alloc] initWithTitle:selectedProfile[@"title"] firstName:selectedProfile[@"firstName"] lastName:selectedProfile[@"lastName"] avatar:selectedProfile[@"avatar"] bio:selectedProfile[@"bio"]];
-    NSLog(@"%@", [detailViewController.profile class]);
+    //NSLog(@"%@", [detailViewController.profile class]);
     
     [self.navigationController pushViewController:detailViewController animated:YES];
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
@@ -145,6 +180,7 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
 
 
 #pragma mark <UICollectionViewDelegateFlowLayout>
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(206.0, 206.0);
 }
@@ -161,45 +197,23 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     return UIEdgeInsetsMake(44.0, 0, 0, 0);
 }
 
-#pragma mark - <UISearchControllerDelegate & UISearchResultsDelegate>
-// Called when the search bar becomes first responder
+#pragma mark - <<#pragma mark - UISearchResultsUpdating>
+
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     // set searchString equal to what's typed into the searchbar
-    NSString *searchString = self.searchController.searchBar.text;
+    NSString *searchString = searchController.searchBar.text;
     NSMutableArray *searchResults = [self.profiles mutableCopy];
     
-    // strip out all the leading and trailing spaces
-    NSString *strippedString = [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    
-    // break up the search terms (separated by spaces)
-    NSArray *searchItems = nil;
-    if (strippedString.length > 0) {
-        searchItems = [strippedString componentsSeparatedByString:@" "];
+    if (searchString != nil) {
+        searchResults = [[NSMutableArray alloc] init];
+        for (NSDictionary *profile in self.profiles) {
+            if ([profile[@"firstName"] containsString:searchString] || [profile[@"lastName"] containsString:searchString] || [profile[@"title"] containsString:searchString]) {
+                [searchResults addObject:profile];
+            }
+        }
     }
     
-    // build all the "AND" expressions for each value in the searchString
-    NSMutableArray *andMatchPredicates= [NSMutableArray array];
-    
-    for (NSString *searchString in searchItems) {
-        // each searchString creates an OR predicate for: name, title
-        NSMutableArray *searchItemsPredicate = [NSMutableArray array];
-        // Use NSExpression represent expressions in our predicates
-        // NSPredicate is made up of samaller, atomic parts: two NSExpressions( a left-hand value and a right-hand value)
-        
-        // name field matching
-        NSExpression *lhs = [NSExpression expressionForKeyPath:@"title"];
-        NSExpression *rhs = [NSExpression expressionForConstantValue:searchString];
-        NSPredicate *finalPredicate = [NSComparisonPredicate predicateWithLeftExpression:lhs rightExpression:rhs modifier:NSDirectPredicateModifier type:NSEqualToPredicateOperatorType options:NSCaseInsensitivePredicateOption];
-        [searchItemsPredicate addObject:finalPredicate];
-        
-        NSCompoundPredicate *orMatchPredicates = [NSCompoundPredicate orPredicateWithSubpredicates:searchItemsPredicate];
-        [andMatchPredicates addObject:orMatchPredicates];
-    }
-    
-    NSCompoundPredicate *finalCompoundPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:andMatchPredicates];
-    searchResults = [[searchResults filteredArrayUsingPredicate:finalCompoundPredicate]mutableCopy];
-    
-    // hand over the filtered results to out search results collectionview
+        // hand over the filtered results to out search results collectionview
     CMBSearchResultsController *collectionviewController = (CMBSearchResultsController *)self.searchController.searchResultsController;
     collectionviewController.filteredProfiles = searchResults;
     NSLog(@"%@", searchResults);
@@ -207,4 +221,57 @@ static NSString * const photoCellIdentifier = @"ProfileCell";
     
 }
 
+#pragma mark - <UIStateRestoration>
+
+// restore several items for state restoration:
+// 1) Search Controller's active state,
+// 2) Search text,
+// 3) first responder
+
+NSString *const ViewControllerTitleKey = @"VIewControllerTitleKey";
+NSString *const SearchControllerIsActiveKey = @"SearchControllerIsActiveKey";
+NSString *const SearchBarTextKey = @"SearchBarTextKey";
+NSString *const SearchBarIsFirstResponderKey = @"SearchBarIsFirstREsponderKey";
+
+- (void) encodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super encodeRestorableStateWithCoder:coder];
+    
+    // encode the view state so it can be restored later
+    // encode the title
+    [coder encodeObject:self.title forKey:ViewControllerTitleKey];
+    
+    UISearchController *searchController = self.searchController;
+    
+    // encode the search controller's active state
+    BOOL searchDisplayControllerIsActive = searchController.isActive;
+    [coder encodeBool:searchDisplayControllerIsActive forKey:SearchControllerIsActiveKey];
+    
+    // encode the first responder status
+    if (searchDisplayControllerIsActive) {
+        [coder encodeBool:[searchController.searchBar isFirstResponder] forKey:SearchBarIsFirstResponderKey];
+    }
+    
+    // encode the searchBar text
+    [coder encodeObject:searchController.searchBar.text forKey:SearchBarTextKey];
+}
+
+- (void) decodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super decodeRestorableStateWithCoder:coder];
+    
+    // restore the title
+    self.title = [coder decodeObjectForKey:ViewControllerTitleKey];
+    
+    // restore the active state
+    // we can't make the searchController active here since it's not part of the view
+    // hierarchy yet, instead we do it in viewWillAppear
+    _searchControllerWasActive = [coder decodeBoolForKey:SearchControllerIsActiveKey];
+    
+    // restore the first responder status:
+    // we can't make the searchController first responder here since it's not part of the view
+    // hierarchy yet, instead we do it in viewWillAppear
+    _searchControllerSearchFieldWasFirstResponder = [coder decodeBoolForKey:SearchBarIsFirstResponderKey];
+    
+    // restore the text in the search field
+    self.searchController.searchBar.text =[coder decodeObjectForKey:SearchBarTextKey];
+}
 @end
